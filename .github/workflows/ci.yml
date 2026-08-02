@@ -18,7 +18,7 @@ jobs:
           version: 10.34.5
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24.15.0
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm verify-core
@@ -36,7 +36,7 @@ jobs:
           version: 10.34.5
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24.15.0
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm exec playwright install --with-deps chrome
