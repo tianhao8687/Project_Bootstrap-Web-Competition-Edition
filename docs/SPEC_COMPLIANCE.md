@@ -9,7 +9,7 @@ Status meanings: **Verified** has direct source, command, test, or runtime evide
 | 0 | BRIEF → research → PLAN → RULES; evidence restraint; explicit research approval; preview/copy/download/recovery | Reducer, four pages, Evidence schemas, ZIP helper, localStorage; unit + browser tests | Verified |
 | 0.2 | No login, database, payments, multi-model routing, automatic code merge, broad search, or fourth formal file | No such dependencies/routes; artifact gate rejects common fourth-file names | Verified |
 | 0.3 | 90-second demonstrable flow | `docs/DEMO_SCRIPT.md`; deterministic demo E2E and screenshots | Verified locally |
-| 1 | Independent web repository and honest upstream disclosure | README and `COMPETITION_CHANGELOG.md`; workspace is an independent Git repository | Verified |
+| 1 | Independent web repository and honest upstream disclosure | Public repository, README and `COMPETITION_CHANGELOG.md`; workspace is an independent Git repository | Verified |
 | 1.2 | Pinned snapshot, source manifest, reproducible sync, CI verification | `core-source.json`, `sync-core.mjs`, `verify-core-snapshot.mjs`, CI workflow | Verified |
 | 2 | Non-technical users, restrained tone, facts vs author claims vs inference | Product copy, research prompt, Evidence kinds and source allow-list | Verified by tests; live model run pending |
 | 3 | F1-F9 MVP functions only | Three Start examples, clarification contract, artifacts, research, approval, export/recovery, three-repository demo mode | Verified |
@@ -27,12 +27,11 @@ Status meanings: **Verified** has direct source, command, test, or runtime evide
 | 13.2 | Ten real-model comparative cases with honest failures | Protocol and ten cases exist in `docs/EVALUATION.md` | Implemented / external run pending |
 | 13.3 | Flow, research, restraint, recovery, security and deployment gates | Local gates pass; `pnpm smoke:deployment` is ready but needs a deployed origin | External delivery pending |
 | 14 | Stage-by-stage implementation with actual command records | `IMPLEMENTATION_STATUS.md` and command outputs | Verified locally |
-| 15.1 | Full Definition of Done including public GitHub/deployment URLs and ten real cases | All local code/material gates except external destinations and real model run | External delivery pending |
+| 15.1 | Full Definition of Done including public GitHub/deployment URLs and ten real cases | Public GitHub repository exists; deployment URL and real model run remain outstanding | External delivery pending |
 | 15.2 | 90-second demo script | `docs/DEMO_SCRIPT.md` | Verified |
 | 16 | README, environment example, deployment, changelog, evaluation and demo files | Root/docs artifacts present | Verified |
 
 ## Remaining completion evidence
 
 1. Run all ten cases with a user-selected real OpenAI-compatible provider and record outputs/failures.
-2. Create or select the public GitHub repository and push the reviewed history.
-3. Deploy to the user-selected Vercel project, record the URL, and run the deployed smoke gate.
+2. Deploy to the user-selected Vercel project, record the URL, and run the deployed smoke gate.
