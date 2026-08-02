@@ -1,0 +1,12 @@
+[
+  { "id": "S1", "complexity": "simple", "idea": "Build a local image batch renamer that works on one folder and never uploads files." },
+  { "id": "S2", "complexity": "simple", "idea": "Build a client-deliverable checklist for freelance designers that catches missing files before sending." },
+  { "id": "S3", "complexity": "simple", "idea": "Build a shift-swap board for one independent café with manager approval and no payroll features." },
+  { "id": "M1", "complexity": "medium", "idea": "Build a searchable interview insight library that imports transcripts, preserves source quotes, and groups evidence by product question." },
+  { "id": "M2", "complexity": "medium", "idea": "Build an AI-assisted product screenshot reviewer that flags visual consistency and accessibility issues without automatically changing files." },
+  { "id": "M3", "complexity": "medium", "idea": "Build an open-source dependency selection helper that compares evidence, maintenance signals, technical fit, and detected licenses." },
+  { "id": "M4", "complexity": "medium", "idea": "Build a classroom project feedback portal for teachers and students with private drafts and published feedback." },
+  { "id": "C1", "complexity": "complex", "idea": "Build a multi-provider document extraction pipeline with queues, retries, provider fallback, cost tracking, and human review." },
+  { "id": "C2", "complexity": "complex", "idea": "Build a services marketplace that initially asks for escrow, disputes, provider payouts, and identity checks." },
+  { "id": "C3", "complexity": "complex", "idea": "Build a health symptom triage assistant for consumers that could influence urgent-care decisions." }
+]
