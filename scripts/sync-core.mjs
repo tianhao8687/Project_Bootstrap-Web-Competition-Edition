@@ -1,4 +1,4 @@
-import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { resolve, dirname } from "node:path";
 import { execFileSync } from "node:child_process";
@@ -14,10 +14,14 @@ if (!/^[0-9a-f]{40}$/.test(commit)) throw new Error("Could not read a full upstr
 
 await rm(destination, { recursive: true, force: true });
 for (const file of manifest.files) {
-  const from = resolve(source, file);
   const to = resolve(destination, file);
   await mkdir(dirname(to), { recursive: true });
-  await cp(from, to);
+  const content = execFileSync(
+    "git",
+    ["-c", `safe.directory=${source}`, "-C", source, "show", `${commit}:${file}`],
+    { encoding: "utf8", maxBuffer: 10 * 1024 * 1024 },
+  ).replace(/\r\n?/g, "\n");
+  await writeFile(to, content, "utf8");
 }
 
 manifest.commit = commit;

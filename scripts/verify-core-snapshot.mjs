@@ -10,7 +10,7 @@ if (!manifest.hashes) throw new Error("Run pnpm sync-core before verification: h
 const failures = [];
 for (const file of manifest.files) {
   try {
-    const content = await readFile(resolve(root, "src", "core", "generated", file));
+    const content = (await readFile(resolve(root, "src", "core", "generated", file), "utf8")).replace(/\r\n?/g, "\n");
     const actual = createHash("sha256").update(content).digest("hex");
     if (actual !== manifest.hashes[file]) failures.push(`${file}: hash mismatch`);
   } catch (error) {
