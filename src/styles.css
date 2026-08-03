@@ -171,9 +171,9 @@ a { color: var(--cyan); }
 .eyebrow { color: var(--cyan); font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin: 0 0 18px; }
 .eyebrow::before { content: "[ "; color: var(--muted); }
 .eyebrow::after { content: " ]"; color: var(--muted); }
-.hero-copy h1 { max-width: 850px; margin: 0; color: var(--ink-strong); font-size: clamp(48px, 5.65vw, 84px); line-height: 0.94; letter-spacing: -0.065em; text-wrap: balance; text-shadow: 0 0 40px rgba(88, 231, 243, 0.08); }
+.hero-copy h1 { max-width: 850px; margin: 0; color: var(--ink-strong); font-size: clamp(48px, 5.15vw, 76px); line-height: 1.06; letter-spacing: -0.045em; white-space: pre-line; text-wrap: balance; text-shadow: 0 0 40px rgba(88, 231, 243, 0.08); }
 .hero-copy h1::after { content: "_"; color: var(--accent); font-family: var(--mono); font-size: 0.55em; animation: cursor 1.15s steps(1) infinite; }
-.hero-lead { max-width: 720px; margin: 30px 0 0; color: var(--muted-strong); font-size: clamp(16px, 1.45vw, 20px); line-height: 1.75; }
+.hero-lead { max-width: 720px; margin: 30px 0 0; color: var(--muted-strong); font-size: clamp(16px, 1.45vw, 20px); line-height: 1.75; white-space: pre-line; }
 .hero-metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 680px; margin-top: 40px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .hero-metrics div { min-height: 84px; display: grid; align-content: center; gap: 5px; padding: 14px 18px; border-right: 1px solid var(--line); }
 .hero-metrics div:last-child { border-right: 0; }
@@ -406,7 +406,7 @@ a { color: var(--cyan); }
   .start-page { min-height: auto; padding: 42px 16px 60px; gap: 38px; }
   .hero-copy { padding-left: 0; }
   .hero-copy::before { display: none; }
-  .hero-copy h1 { font-size: clamp(42px, 12vw, 58px); }
+  .hero-copy h1 { font-size: clamp(40px, 11vw, 52px); line-height: 1.08; }
   .hero-lead { font-size: 15px; margin-top: 22px; }
   .hero-metrics { grid-template-columns: 1fr; }
   .hero-metrics div { min-height: 62px; border-right: 0; border-bottom: 1px solid var(--line); }

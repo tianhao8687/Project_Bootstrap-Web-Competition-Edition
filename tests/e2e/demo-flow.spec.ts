@@ -15,8 +15,8 @@ test.afterEach(async ({ page }) => {
 
 test("demo mode completes the three-file pipeline", async ({ page }) => {
   await page.goto("/");
-  await page.getByLabel("你想做什么？").fill("为自由设计师检查客户交付物是否齐全，并在发送前提示遗漏");
-  await page.getByRole("button", { name: "开始定义项目" }).click();
+  await page.getByLabel("描述你的项目想法").fill("为自由设计师检查客户交付物是否齐全，并在发送前提示遗漏");
+  await page.getByRole("button", { name: "开始梳理项目" }).click();
 
   await expect(page.getByText("PROJECT_BRIEF.md").first()).toBeVisible();
   await page.getByRole("button", { name: "确认 BRIEF，开始开源审查" }).click();
@@ -38,8 +38,8 @@ test("demo mode completes the three-file pipeline", async ({ page }) => {
 
 test("simple local tool can skip optional research and still finish", async ({ page }) => {
   await page.goto("/");
-  await page.getByRole("textbox", { name: "你想做什么？", exact: true }).fill("做一个本地图片批量重命名工具，只处理一个文件夹");
-  await page.getByRole("button", { name: "开始定义项目", exact: true }).click();
+  await page.getByRole("textbox", { name: "描述你的项目想法", exact: true }).fill("做一个本地图片批量重命名工具，只处理一个文件夹");
+  await page.getByRole("button", { name: "开始梳理项目", exact: true }).click();
   await expect(page.getByText("PROJECT_BRIEF.md").first()).toBeVisible();
   await page.getByRole("button", { name: "确认 BRIEF，开始开源审查", exact: true }).click();
   await page.getByRole("button", { name: "跳过调研，继续生成 PLAN", exact: true }).click();
@@ -51,8 +51,8 @@ test("simple local tool can skip optional research and still finish", async ({ p
 test("English flow handles a mature adjacent product without changing the state machine", async ({ page }) => {
   await page.goto("/");
   await page.getByRole("button", { name: "English", exact: true }).click();
-  await page.getByRole("textbox", { name: "What do you want to build?", exact: true }).fill("Build a lightweight spec-driven planning tool for non-technical founders before they start AI coding.");
-  await page.getByRole("button", { name: "Define the project", exact: true }).click();
+  await page.getByRole("textbox", { name: "Describe your project idea", exact: true }).fill("Build a lightweight spec-driven planning tool for non-technical founders before they start AI coding.");
+  await page.getByRole("button", { name: "Shape the project", exact: true }).click();
   await expect(page.getByText("PROJECT_BRIEF.md").first()).toBeVisible();
   await page.getByRole("button", { name: "Confirm BRIEF and check open source", exact: true }).click();
   await expect(page.getByRole("heading", { name: "Open-source reality check", exact: true })).toBeVisible();
@@ -65,8 +65,8 @@ test("English flow handles a mature adjacent product without changing the state 
 
 test("refresh restores the current confirmed work instead of restarting", async ({ page }) => {
   await page.goto("/");
-  await page.getByRole("textbox", { name: "你想做什么？", exact: true }).fill("把散落的访谈记录整理成可检索的产品洞察");
-  await page.getByRole("button", { name: "开始定义项目", exact: true }).click();
+  await page.getByRole("textbox", { name: "描述你的项目想法", exact: true }).fill("把散落的访谈记录整理成可检索的产品洞察");
+  await page.getByRole("button", { name: "开始梳理项目", exact: true }).click();
   await expect(page.getByText("PROJECT_BRIEF.md").first()).toBeVisible();
   await page.reload();
   await expect(page.getByText("PROJECT_BRIEF.md").first()).toBeVisible();
@@ -77,11 +77,11 @@ test("start step is operable with the keyboard", async ({ page }) => {
   await page.goto("/");
   const interactiveMilliseconds = await page.evaluate(() => (performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming).domInteractive);
   expect(interactiveMilliseconds).toBeLessThan(2_000);
-  const idea = page.getByRole("textbox", { name: "你想做什么？", exact: true });
+  const idea = page.getByRole("textbox", { name: "描述你的项目想法", exact: true });
   await expect(idea).toBeFocused();
   await idea.fill("为独立咖啡店做一个范围克制的员工排班工具");
   for (let index = 0; index < 8; index += 1) await page.keyboard.press("Tab");
-  const start = page.getByRole("button", { name: "开始定义项目", exact: true });
+  const start = page.getByRole("button", { name: "开始梳理项目", exact: true });
   await expect(start).toBeFocused();
   await page.keyboard.press("Enter");
   await expect(page.getByText("PROJECT_BRIEF.md").first()).toBeVisible();

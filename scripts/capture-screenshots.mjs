@@ -25,8 +25,8 @@ try {
   await page.goto("http://127.0.0.1:4173/");
   await page.screenshot({ path: resolve(output, "01-start-desktop.png"), fullPage: true });
 
-  await page.getByRole("textbox", { name: "你想做什么？", exact: true }).fill("为自由设计师检查客户交付物是否齐全，并在发送前提示遗漏");
-  await page.getByRole("button", { name: "开始定义项目", exact: true }).click();
+  await page.getByRole("textbox", { name: "描述你的项目想法", exact: true }).fill("为自由设计师检查客户交付物是否齐全，并在发送前提示遗漏");
+  await page.getByRole("button", { name: "开始梳理项目", exact: true }).click();
   await page.getByRole("button", { name: "确认 BRIEF，开始开源审查", exact: true }).waitFor();
   await page.screenshot({ path: resolve(output, "02-brief-desktop.png"), fullPage: true });
 
