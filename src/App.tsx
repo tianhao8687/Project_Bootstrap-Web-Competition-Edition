@@ -210,11 +210,17 @@ export default function App() {
 
   const artifacts = [session.brief, session.plan, session.rules].filter((item): item is Artifact => Boolean(item));
   return (
-    <div className="app-shell">
+    <div className={`app-shell stage-${session.stage}`}>
+      <div className="ambient-grid" aria-hidden="true" />
       <header className="topbar">
         <a className="brand" href="#" onClick={(event) => event.preventDefault()} aria-label="Project Bootstrap Web">
-          <span className="brand-mark">PB</span><span><strong>Project Bootstrap</strong><small>{text.brandTag}</small></span>
+          <span className="brand-mark"><span>PB</span></span><span><strong>Project Bootstrap</strong><small>{text.brandTag}</small></span>
         </a>
+        <div className="topbar-telemetry" aria-hidden="true">
+          <span className="telemetry-pulse" />
+          <span>PIPELINE ONLINE</span>
+          <span>03 OUTPUTS</span>
+        </div>
         <div className="topbar-actions">
           <span className={`mode-indicator mode-${session.mode}`}>{session.mode === "demo" ? text.demo : text.live}</span>
           {session.stage !== "idea_input" && <button className="text-button" onClick={reset}>{text.reset}</button>}

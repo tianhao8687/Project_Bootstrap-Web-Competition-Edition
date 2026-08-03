@@ -7,15 +7,18 @@ const root = resolve(import.meta.dirname, "..");
 const output = resolve(root, "docs", "screenshots");
 await mkdir(output, { recursive: true });
 
-const server = await createServer({
-  root,
-  server: { host: "127.0.0.1", port: 4173, strictPort: true },
-  logLevel: "error",
-});
+const useExternalServer = process.env.PLAYWRIGHT_EXTERNAL_SERVER === "1";
+const server = useExternalServer
+  ? undefined
+  : await createServer({
+      root,
+      server: { host: "127.0.0.1", port: 4173, strictPort: true },
+      logLevel: "error",
+    });
 
 let browser;
 try {
-  await server.listen();
+  await server?.listen();
   browser = await chromium.launch({ channel: "chrome", headless: true });
   const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1 });
   const page = await context.newPage();
@@ -43,7 +46,7 @@ try {
   await context.close();
 } finally {
   await browser?.close();
-  await server.close();
+  await server?.close();
 }
 
 console.log(`Captured competition screenshots in ${output}.`);

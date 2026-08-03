@@ -22,6 +22,11 @@ export function StartPage({ locale, mode, busy, onLocaleChange, onModeChange, on
         <p className="eyebrow">{text.startEyebrow}</p>
         <h1>{text.startTitle}</h1>
         <p className="hero-lead">{text.startLead}</p>
+        <div className="hero-metrics" aria-label={locale === "zh-CN" ? "流程指标" : "Workflow metrics"}>
+          <div><strong>03</strong><span>{locale === "zh-CN" ? "正式交付文件" : "formal outputs"}</span></div>
+          <div><strong>05</strong><span>{locale === "zh-CN" ? "最多深读仓库" : "repository deep reads"}</span></div>
+          <div><strong>90s</strong><span>{locale === "zh-CN" ? "演示主流程" : "demo path"}</span></div>
+        </div>
         <div className="promise-row" aria-label="Workflow output">
           <span>01 · PROJECT_BRIEF.md</span>
           <span>02 · Reality Check</span>
@@ -31,6 +36,7 @@ export function StartPage({ locale, mode, busy, onLocaleChange, onModeChange, on
       </section>
 
       <section className="start-form-card" aria-label={locale === "zh-CN" ? "项目想法表单" : "Project idea form"}>
+        <div className="form-chrome" aria-hidden="true"><span><i /><i /><i /></span><code>bootstrap.init / idea_input</code></div>
         <form onSubmit={(event) => { event.preventDefault(); if (valid) onStart(idea); }}>
           <div className="field-header">
             <label id="idea-heading" htmlFor="idea">{text.ideaLabel}</label>
