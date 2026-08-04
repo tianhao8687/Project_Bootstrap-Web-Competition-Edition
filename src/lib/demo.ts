@@ -238,6 +238,483 @@ export function demoPlan(locale: Locale, revision = 1): Artifact {
 - æ¯å¼ ä¸šåŠ¡è¡¨å’Œæ¯ä¸ªå‘é‡è®°å½•å¿…é¡»å¸¦ organization_idï¼›æœåŠ¡å±‚ä¸å¾—æ¥å—å®¢æˆ·ç«¯ç›´æ¥æŒ‡å®šå·²æˆæƒç§Ÿæˆ·ã€‚
 - å…ˆæƒé™è¿‡æ»¤å†ç›¸ä¼¼åº¦æ£€ç´¢ï¼Œç¦æ­¢å…ˆå…¨åº“å¬å›ååœ¨åº”ç”¨å±‚åˆ è¶Šæƒç»“æœã€‚
 - åŸæ–‡ä»¶ã€æå–æ–‡æœ¬ã€Chunkã€Embeddingã€ç¼“å­˜å’Œå¼•ç”¨å¿…é¡»å…±äº«å¯è¿½è¸ªçš„ document_version_idã€‚
-- åˆ é™¤ä½¿ç”¨å¯æ¢å¤ä»»åŠ¡ç¼–æ’ëŞü¶‰ËkºwµçAÑ¡”ÁÉ½‘ÕÑ¥½¸$ÁÉ½Ù¥‘•È°Á…¥ÅÕ½Ñ„°É•…°ÕÍ•È‘…Ñ„°ÁÉ½‘ÕÑ¥½¸µ¥É…Ñ¥½¸°É•¥½¸°É•Ñ•¹Ñ¥½¸°½È½µÁ±¥…¹”ÉÕ±”¸(´1½İ•È¥Ñ…Ñ¥½¸°É•™ÕÍ…°°¥Í½±…Ñ¥½¸°Í•ÕÉ¥Ñä°½ÈÑ•ÍĞ…Ñ•ÌìƒŠqÍ¡¥À¹½Ü°™¥à±…Ñ•ËŠt¥Ì¹½Ğ…ÕÑ¡½É¥é…Ñ¥½¸¸((ŒŒ€Ô¸I•ÅÕ¥É•É½±•Ì…¹¥ÍÍÕ”½İ¹•ÉÍ¡¥À((´AÉ½‘ÕĞÍ½Á”…¹ÕÍ•È…•ÁÑ…¹”ƒŠHAÉ½‘ÕĞ…¹‘•±¥Ù•Éä½İ¹•È¸(´A%Ì°‘…Ñ„°µ¥É…Ñ¥½¹Ì°İ½É­•ÉÌ°‘•Á±½åµ•¹ĞƒŠHÁÁ±¥…Ñ¥½¸…¹‘…Ñ„…É¡¥Ñ•ÑÕÉ”½İ¹•È¸(´A…ÉÍ¥¹œ°¡Õ¹­Ì°•µ‰•‘‘¥¹Ì°É•ÑÉ¥•Ù…°°É•É…¹­¥¹œ°ÁÉ½µÁÑÌ°¥Ñ…Ñ¥½¹Ì°•Ù…±Õ…Ñ¥½¸ƒŠHI…¹•Ù…±Õ…Ñ¥½¸½İ¹•È¸(´ÕÑ¡•¹Ñ¥…Ñ¥½¸°Ñ•¹…¹Ğ¥Í½±…Ñ¥½¸°ÁÉ½µÁĞ¥¹©•Ñ¥½¸°‘•±•Ñ¥½¸°Ñ•ÍÑ¥¹œ°É•±•…Í”•Ù¥‘•¹”ƒŠHM•ÕÉ¥Ñä…¹ÅÕ…±¥Ñä½İ¹•È¸(´É½ÍÌµ‰½Õ¹‘…Éä¥ÍÍÕ•Ì¡…Ù”½¹”ÁÉ¥µ…Éä½İ¹•ÈìÉ•Ù¥•İÌ…ÑÑ… Ñ¼Ñ¡”Í…µ”¥ÍÍÕ”¥¹ÍÑ•…½˜ÁÉ½‘Õ¥¹œ„Í•½¹Á±…¸¸((ŒŒ€Ø¸MÁ•¥…±¥é•‰½Õ¹‘…ÉäÉÕ±•Ì((ŒŒŒ…Ñ…‰…Í”…¹µ¥É…Ñ¥½¹Ì((´Ù•ÉäÑ•¹…¹Ğ‰ÕÍ¥¹•ÍÌÑ…‰±”°Ù•Ñ½È°…¹…¡”­•ä¥¹±Õ‘•Ì½É…¹¥é…Ñ¥½¹}¥ì„¹•ÜÑ…‰±”½È¥¹‘•àİ¥Ñ¡½ÕĞ„Ñ•¹…¹Ğ­•ä…¹¹½Ğµ•É”¸(´M¡•µ„¡…¹•Ì¥¹±Õ‘”™½Éİ…Éµ¥É…Ñ¥½¸°É½±±‰…¬½ÈÉ•½Ù•Éä°Ñ•ÍĞ‘…Ñ„°…¹•á•ÕÑ••Ù¥‘•¹”ì¹•Ù•ÈÁ…Ñ ÁÉ½‘ÕÑ¥½¸‘…Ñ„‘¥É•Ñ±ä¸(´AÉ•Í•ÉÙ”ÑÉ…•…‰¥±¥Ñä…É½ÍÌM½ÕÉ•½Õµ•¹Ğ°½Õµ•¹ÑY•ÉÍ¥½¸°¡Õ¹¬°µ‰•‘‘¥¹œ°…¹¥Ñ…Ñ¥½¸¸((ŒŒŒI…¹ÁÉ½Ù¥‘•ÉÌ((´½Õµ•¹ĞÑ•áĞ¥ÌÕ¹ÑÉÕÍÑ••Ù¥‘•¹”…¹¹•Ù•È•¹Ñ•ÉÌÍåÍÑ•´¥¹ÍÑÉÕÑ¥½¹Ì°Ñ½½°…ÕÑ¡½É¥Ñä°½È•á•ÕÑ…‰±”‘¥É•Ñ¥Ù•Ì¸(´M•ÉÙ•È…ÕÑ¡½É¥é…Ñ¥½¸™¥±Ñ•É¥¹œ½µÁ±•Ñ•Ì‰•™½É”É•ÑÉ¥•Ù…°ìÉ½ÍÌµÑ•¹…¹ĞÉ•…±°™½±±½İ•‰ä…ÁÁ±¥…Ñ¥½¸™¥±Ñ•É¥¹œ¥Ì™½É‰¥‘‘•¸¸(´Ù•Éä™…ÑÕ…°…¹Íİ•È¥Ñ•ÌÑ¡”•á…ĞÁ…ÉÑ¥¥Á…Ñ¥¹œ‘½Õµ•¹ĞÙ•ÉÍ¥½¸ì¥¹Ù…±¥½Èİ•…¬•Ù¥‘•¹”…ÕÍ•ÌÉ•™ÕÍ…°¸(´µ‰•‘‘¥¹œ°É•É…¹­•È°…¹¡…Ğµ½‘•±ÌÕÍ”…‘…ÁÑ•ÉÌİ¥Ñ Í¡•µ„Ù…±¥‘…Ñ¥½¸°Ñ¥µ•½ÕĞ°É…Ñ”±¥µ¥Ñ¥¹œ°…¹•ÉÉ½Èµ…ÁÁ¥¹œ¸(´¡…¹¥¹œ¡Õ¹­Ì°µ½‘•°°ÁÉ½µÁĞ°Ñ½Àµ¬°É•É…¹­•È°½ÈÑ¡É•Í¡½±É•ÅÕ¥É•ÌÑ¡”™¥á•‰•¹¡µ…É¬…¹„½µÁ…É¥Í½¸½˜¥Ñ…Ñ¥½¸°É•™ÕÍ…°°±…Ñ•¹ä°…¹½ÍĞ¸((ŒŒŒM•ÕÉ¥Ñä°ÁÉ¥Ù…ä°…¹½ÍĞ((´M•É•ÑÌÉ•µ…¥¸¥¸Ñ¡”Í•ÉÙ•ÈÍ•É•ĞÍÑ½É”ì±½Ì°±¥•¹Ğ‰Õ¹‘±•Ì°•ÉÉ½ÉÌ°Í¹…ÁÍ¡½ÑÌ°…¹•áÁ½ÉÑÌ½¹Ñ…¥¸¹•¥Ñ¡•ÈÍ•É•ÑÌ¹½ÈÉ…ÜÍ•¹Í¥Ñ¥Ù”µ…Ñ•É¥…°¸(´	•™½É”É•…°Í½ÕÉ•Ì…É”ÕÍ•°½¹™¥É´‘…Ñ„…ÕÑ¡½É¥Ñä°É•Ñ•¹Ñ¥½¸°‘•±•Ñ¥½¸°…¹ÁÉ½Ù¥‘•ÈÁ½±¥äì½Ñ¡•Éİ¥Í”ÕÍ”Í…¹¥Ñ¥é•™¥áÑÕÉ•Ì½¹±ä¸(´…¡•Ì¥¹¡•É¥ĞÑ•¹…¹Ğ°ÕÍ•ÈÁ•Éµ¥ÍÍ¥½¸°Í½ÕÉ”Ù•ÉÍ¥½¸°…¹‘•±•Ñ¥½¸ÍÑ…Ñ”ì‘¼¹½Ğ•¹…‰±”„…¡”İ¥Ñ¡½ÕĞ¥Í½±…Ñ¥½¸•Ù¥‘•¹”¸(´AÉ½Ù¥‘•ÈÑ¥µ•½ÕĞ°ÅÕ½Ñ„°½È‰Õ‘•Ğ™…¥±ÕÉ”¥Ì…¸•áÁ±¥¥ĞÉ•½Ù•É…‰±”•ÉÉ½È…¹¹•Ù•È™…±±Ì‰…¬Ñ¼…¸Õ¹¥Ñ•…¹Íİ•È¸((ŒŒ€Ü¸Q•ÍÑ¥¹œ…¹½µÁ±•Ñ¥½¸É•Á½ÉÑÌ((´U¹¥ĞÑ•ÍÑÌ½Ù•È…ÕÑ¡½É¥é…Ñ¥½¸°Ù•ÉÍ¥½¸ÑÉ…•…‰¥±¥Ñä°É•™ÕÍ…°Ñ¡É•Í¡½±‘Ì°¥Ñ…Ñ¥½¸µ…ÁÁ¥¹œ°¥‘•µÁ½Ñ•¹Ğ©½‰Ì°…¹‘•±•Ñ¥½¸ÍÑ…Ñ”¸(´%¹Ñ•É…Ñ¥½¸Ñ•ÍÑÌÕÍ”Ñİ¼Ñ•¹…¹ÑÌ…¹¥‘•¹Ñ¥…±±ä¹…µ•™¥±•Ì™½Èé•É¼±•…­…”°µ…±¥¥½ÕÌ‘½Õµ•¹ÑÌ™½ÈÁÉ½µÁĞµ¥¹©•Ñ¥½¸¥Í½±…Ñ¥½¸°…¹™…¥±•©½‰Ì™½ÈÉ•½Ù•Éä¸(´I¡…¹•ÌÉÕ¸Ñ¡”™¥á•‰•¹¡µ…É¬…¹É•Á½ÉĞ½¹±ä•á•ÕÑ•½ÉÁÕÌÙ•ÉÍ¥½¹Ì°Í•ÑÑ¥¹Ì°Á…ÍÍ•Ì°™…¥±ÕÉ•Ì°±…Ñ•¹ä°…¹½ÍĞ¸(´É½Ù•ÉÌÕÁ±½…µÑ¼µÍ•…É °ÅÕ•ÍÑ¥½¸µÑ¼µ¥Ñ…Ñ¥½¸°Õ¹ÍÕÁÁ½ÉÑ•É•™ÕÍ…°°Õ¹…ÕÑ¡½É¥é•…•ÍÌ°…¹Á½ÍĞµ‘•±•Ñ¥½¸¹½¸µÉ•ÑÉ¥•Ù…°¸(´½µÁ±•Ñ¥½¸É•Á½ÉÑÌ±¥ÍĞ•á•ÕÑ•½µµ…¹‘Ì…¹É•ÍÕ±ÑÌ°Í­¥ÁÁ•¡•­Ì°­¹½İ¸±¥µ¥ÑÌ°…¹É½±±‰…¬ì¹¼•Ù¥‘•¹”µ•…¹Ì¹¼ƒŠq…±°Á…ÍÍ•“Št±…¥´¸((ŒŒ€à¸AÉ½©•ĞµÍÁ•¥™¥Œ¡…É½¹ÍÑÉ…¥¹ÑÌ((´¥Ñ…Ñ¥½¸°…ÕÑ¡½É¥é…Ñ¥½¸™¥±Ñ•É¥¹œ°É•™ÕÍ…°°…¹‘•±•Ñ¥½¸…É”½É”ÁÉ½‘ÕĞ‰•¡…Ù¥½ÈìÍÑ…Ñ¥Œ‘•µ¼‘…Ñ„…¹¹½Ğ‰”ÁÉ•Í•¹Ñ•…Ì½µÁ±•Ñ¥½¸¸(´¼¹½Ğ½Áä½‘”™É½´•áÑ•É¹…°É•Á½Í¥Ñ½É¥•Ìİ¥Ñ¡½ÕĞ„±•…È½µÁ…Ñ¥‰±”±¥•¹Í”ì¥‘•…Ìµ…ä‰”É•™•É•¹•‰ÕĞ¥µÁ±•µ•¹Ñ…Ñ¥½¸É•µ…¥¹Ì¥¹‘•Á•¹‘•¹Ğ¸(´!¥ÍÑ½É¥…°…¹Íİ•ÉÌµ…äÉ•Ñ…¥¸„Í½ÕÉ”Í¹…ÁÍ¡½Ğ°‰ÕĞ‘•±•Ñ•Í½ÕÉ”Ñ•áĞ…¹¹½ĞÉ•µ…¥¸Ù¥Í¥‰±”ìÉ•Ñ•¹Ñ¥½¸™½±±½İÌ…ÁÁÉ½Ù•Á½±¥ä¸(´AÉ½‘ÕÑ¥½¸¹•Ù•È•áÁ½Í•ÌÑ•ÍĞµ½­Ì°ÁÕ‰±¥ŒÍ…µÁ±”Í½ÕÉ•Ì°½È‘•‰Õœ‰åÁ…ÍÍ•ÌÑ¼½É‘¥¹…ÉäÕÍ•ÉÌ¸((ŒŒ€ä¸IÕ±”¡…¹”½¹‘¥Ñ¥½¹Ì((´±…É¥™¥…Ñ¥½¹Ì°½İ¹•È¹…µ•Ì°…¹Ñ•ÍÑÌÑ¡…Ğ‘¼¹½Ğ¡…¹”…ÕÑ¡½É¥Ñäµ…ä‰”•‘¥Ñ•±½…±±äİ¥Ñ Ñ¡”…™™•Ñ•Í•Ñ¥½¸É•½É‘•¸(´¡…¹¥¹œ½É”ÉÕ±•Ì°…ÕÑ¡½É¥é…Ñ¥½¸±•Ù•±Ì°Ñ•¹…¹Ğ¥Í½±…Ñ¥½¸°¥Ñ…Ñ¥½¸½É•™ÕÍ…°…Ñ•Ì°É•Ñ•¹Ñ¥½¸°ÁÉ½Ù¥‘•ÉÌ°½ÈÁÉ½‘ÕÑ¥½¸µ¥É…Ñ¥½¹ÌÉ•ÅÕ¥É•Ì•áÁ±¥¥Ğ…ÁÁÉ½Ù…°¸(´UÁ‘…Ñ”½¹±ä…™™•Ñ•Í•Ñ¥½¹Ìì„!=\¡…¹”ÕÁ‘…Ñ•ÌAI=)Q}A18¹µ°İ¡¥±”„]!P½ÈÍ½Á”¡…¹”ÕÁ‘…Ñ•ÌAI=)Q}	I%¹µ™¥ÉÍĞ¹€¤°(€ôì)ô()•áÁ½ÉĞ™Õ¹Ñ¥½¸‘•µ½I•Í•…É ¡±½…±”è1½…±”¤èI•Í•…É¡I•ÍÕ±Ğì(€½¹ÍĞ¥¹™•É•¹”€ôì(€€€­¥¹è€‰…¥}¥¹™•É•¹”ˆ…Ì½¹ÍĞ°(€€€Í½ÕÉ”è€‰½µÁ…É¥Í½¸……¥¹ÍĞÑ¡”½¹™¥Éµ•I­¹½İ±•‘”µ‰…Í”‰É¥•˜ˆ°(€€€ÍÕµµ…Éäèé ¡±½…±”°€‹–~ë’ê;–ŞË†»¢ºIƒn»š‚šv¦fC’â;–òWR£¦^£šj’êŸ–N¦¦7š:£šZ·ˆ°€‰AÉ½‘ÕĞµ™¥Ğ¥¹™•É•¹”‰…Í•½¸Ñ¡”½¹™¥Éµ•I°…ÕÑ¡½É¥é…Ñ¥½¸°…¹¥Ñ…Ñ¥½¸…Ñ•Ì¸ˆ¤°(€ôì(€½¹ÍĞÉ•…‘µ”€ô€¡Í½ÕÉ”èÍÑÉ¥¹œ°¡¥¹•Í”èÍÑÉ¥¹œ°•¹±¥Í èÍÑÉ¥¹œ¤€ôø€¡ì(€€€­¥¹è€‰É•…‘µ•}±…¥´ˆ…Ì½¹ÍĞ°(€€€Í½ÕÉ”è€‘íÍ½ÕÉ•ôéI5€°(€€€ÍÕµµ…Éäèé ¡±½…±”°¡¥¹•Í”°•¹±¥Í ¤°(€ô¤ì(€½¹ÍĞ±¥•¹Í”€ô€¡Í½ÕÉ”èÍÑÉ¥¹œ°ÍÁ‘àèÍÑÉ¥¹œ¤€ôø€¡ì(€€€­¥¹è€‰±¥•¹Í•}•Ù¥‘•¹”ˆ…Ì½¹ÍĞ°(€€€Í½ÕÉ”è€‘íÍ½ÕÉ•ôé1%9M€°(€€€ÍÕµµ…Éäèé ¡±½…±”°ƒ–ö»–ş¯Ÿ¢ºÃ–öW¢¾—’îO–êO¢ºã–>¿¢¾’âè€‘íÍÁ‘á÷	€°Q¡”‰Õ¹‘±•Í¹…ÁÍ¡½ĞÉ•½É‘ÌÑ¡”É•Á½Í¥Ñ½Éä±¥•¹Í”…Ì€‘íÍÁ‘áô¹€¤°(€ô¤ì(€½¹ÍĞ±…¹¡…¥¸€ôÉ•…‘µ” ‰±…¹¡…¥¸µ…¤½±…¹¡…¥¸ˆ°€‰I5ƒ–Â–Ûš>?¢şÃ’âëšz–îë’â+’â/šZš~—š:£B–êSR£jš†šzÛˆ°€‰%ÑÌI5‘•ÍÉ¥‰•Ì„™É…µ•İ½É¬™½È½¹Ñ•áĞµ…İ…É”É•…Í½¹¥¹œ…ÁÁ±¥…Ñ¥½¹Ì¸ˆ¤ì(€½¹ÍĞ±±…µ…%¹‘•à€ôÉ•…‘µ” ‰ÉÕ¸µ±±…µ„½±±…µ…}¥¹‘•àˆ°€‰I5ƒ–ÆW’ë’êšZš†šF–>[Ò‹–òWšÒ‹–J3š~—¢¾‹–Ş—’ösšÖˆ°€‰%ÑÌI5ÁÉ•Í•¹ÑÌ‘½Õµ•¹Ğ¥¹•ÍÑ¥½¸°¥¹‘•á¥¹œ°É•ÑÉ¥•Ù…°°…¹ÅÕ•Éäİ½É­™±½İÌ¸ˆ¤ì(€½¹ÍĞÁÙ•Ñ½È€ôÉ•…‘µ” ‰ÁÙ•Ñ½È½ÁÙ•Ñ½Èˆ°€‰I5ƒ¢ºÃ–öW’êA½ÍÑÉ•ME0ƒ’â·j–BG¦?nã’òó–ê›šBsÒ‹¢÷–*oˆ°€‰%ÑÌI5‘½Õµ•¹ÑÌÙ•Ñ½ÈÍ¥µ¥±…É¥ÑäÍ•…É ™½ÈA½ÍÑÉ•ME0¸ˆ¤ì(€½¹ÍĞ¡…åÍÑ…¬€ôÉ•…‘µ” ‰‘••ÁÍ•Ğµ…¤½¡…åÍÑ…¬ˆ°€‰I5ƒ–ÆW’ë’ê–>¿î–B#jšÒ‹Rš"C–J3¢¾šÖ/º‡êÿˆ°€‰%ÑÌI5ÁÉ•Í•¹ÑÌ½µÁ½Í…‰±”É•ÑÉ¥•Ù…°°•¹•É…Ñ¥½¸°…¹•Ù…±Õ…Ñ¥½¸Á¥Á•±¥¹•Ì¸ˆ¤ì((€É•ÑÕÉ¸ì(€€€ÅÕ•É¥•Ìèl‰•¹Ñ•ÉÁÉ¥Í”I­¹½İ±•‘”‰…Í”¥Ñ…Ñ¥½¹Ìˆ°€‰I‘½Õµ•¹Ğ¥¹•ÍÑ¥½¸É•ÑÉ¥•Ù…°•Ù…±Õ…Ñ¥½¸ˆ°€‰A½ÍÑÉ•ME0Ù•Ñ½ÈÍ•…É Ñ•¹…¹Ğ™¥±Ñ•É¥¹œ‰t°(€€€™•Ñ¡•‘Ğè¹•Ü…Ñ” ¤¹Ñ½%M=MÑÉ¥¹œ ¤°(€€€±¥µ¥Ñ…Ñ¥½¹Ìèmé ¡±½…±”°€‹¢şgšb¿’âë–º3šVĞIƒš†#’ú/–në–ºkj¢¾š6»–ş¯Ÿ¾ò3’â7’î¢†£–öO–&4¥Ñ!Õˆƒ*Ûš¾òo–º{š^Ûš¢‡–ò?š&7š&Ÿ¢†3r–º{šÒ‹ˆ°€‰Q¡¥Ì¥Ì„™¥á••Ù¥‘•¹”Í¹…ÁÍ¡½Ğ™½ÈÑ¡”½µÁ±•Ñ”I…Í”°¹½ĞÕÉÉ•¹Ğ¥Ñ!ÕˆÍÑ…Ñ”ì±¥Ù”µ½‘”Á•É™½ÉµÌÉ•…°É•ÑÉ¥•Ù…°¸ˆ¥t°(€€€É•Á½Í¥Ñ½É¥•Ìèl(€€€€€ì(€€€€€€€™Õ±±9…µ”è€‰±…¹¡…¥¸µ…¤½±…¹¡…¥¸ˆ°(€€€€€€€ÕÉ°è€‰¡ÑÑÁÌè¼½¥Ñ¡Õˆ¹½´½±…¹¡…¥¸µ…¤½±…¹¡…¥¸ˆ°(€€€€€€€É•±•Ù…¹”è€‰¡¥ ˆ°(€€€€€€€ÍÕµµ…Éäèé ¡±½…±”°€‹š>C’úoš¢‡–z/šÒ‹–f£–Ş—–ß–J3¢şC¢†3š^Ûš*÷¢Æ‡¾ò3¦–B#–>¢AÉ½Ù¥‘•Èƒ’â8Iƒî’îÛ¢úçV3ˆ°€‰AÉ½Ù¥‘•Ìµ½‘•°°É•ÑÉ¥•Ù•È°Ñ½½°°…¹ÉÕ¹Ñ¥µ”…‰ÍÑÉ…Ñ¥½¹ÌÕÍ•™Õ°™½ÈÁÉ½Ù¥‘•È…¹I½µÁ½¹•¹Ğ‰½Õ¹‘…É¥•Ì¸ˆ¤°(€€€€€€€½¹™¥Éµ•‘…Á…‰¥±¥Ñ¥•Ìèmé ¡±½…±”°€‰I5ƒ–ÃÃšR¿š2šÒ‹–Š{–òë’â;–’k7š¢‡–z/¦nš"Cˆ°€‰Q¡”I5±…¥µÌÉ•ÑÉ¥•Ù…°µ…Õµ•¹Ñ•…¹µÕ±Ñ¤µµ½‘•°¥¹Ñ•É…Ñ¥½¹Ì¸ˆ¥t°(€€€€€€€ÕÍ•™Õ±I•™•É•¹•Ìèmé ¡±½…±”°€‹–>¢–>¿šnÿš6ˆAÉ½Ù¥‘•Èƒ–J3šÒ‹î’îÛš:—–>¾ò3’â7nÓš:—îŸš&ÿ–º3šVÓš†šzÛ–’7šv–ê›ˆ°€‰I•™•É•¹”É•Á±…•…‰±”ÁÉ½Ù¥‘•È…¹É•ÑÉ¥•Ù…°¥¹Ñ•É™…•Ìİ¥Ñ¡½ÕĞ¥¹¡•É¥Ñ¥¹œÑ¡”™Õ±°™É…µ•İ½É¬½µÁ±•á¥Ñä¸ˆ¥t°(€€€€€€€…Ù½¥‘½Áå¥¹œèmé ¡±½…±”°€‰5Y@ƒ’â7–òW–”•¹Ó–Ş—–ß–ú«:¿–J3’â7¦r¢šjš*÷¢Æ‡–Æˆ°€‰¼¹½Ğ¥¹ÑÉ½‘Õ”…•¹ÑÌ°Ñ½½°±½½ÁÌ°½ÈÕ¹ÕÍ•…‰ÍÑÉ…Ñ¥½¹Ì¥¹Ñ¼Ñ¡”5Y@¸ˆ¥t°(€€€€€€€‘¥™™•É•¹•Ìèmé ¡±½…±”°€‹šr³¦†çn»’î—’ò’âkšv¦fC–òWR£šr'šV#šŸ–J3–"ƒ¦f“’âë’êŸ–N¦^£šˆ°€‰Q¡¥ÌÁÉ½©•Ğµ…­•Ì•¹Ñ•ÉÁÉ¥Í”…ÕÑ¡½É¥é…Ñ¥½¸°¥Ñ…Ñ¥½¸Ù…±¥‘¥Ñä°…¹‘•±•Ñ¥½¸ÁÉ½‘ÕĞ…Ñ•Ì¸ˆ¥t°(€€€€€€€±¥•¹Í”èìÍÁ‘àè€‰5%Pˆ°ÍÑ…ÑÕÌè€‰‘•Ñ•Ñ•ˆô°(€€€€€€€•Ù¥‘•¹”èm±…¹¡…¥¸°±¥•¹Í” ‰±…¹¡…¥¸µ…¤½±…¹¡…¥¸ˆ°€‰5%Pˆ¤°¥¹™•É•¹•t°(€€€€€ô°(€€€€€ì(€€€€€€€™Õ±±9…µ”è€‰ÉÕ¸µ±±…µ„½±±…µ…}¥¹‘•àˆ°(€€€€€€€ÕÉ°è€‰¡ÑÑÁÌè¼½¥Ñ¡Õˆ¹½´½ÉÕ¸µ±±…µ„½±±…µ…}¥¹‘•àˆ°(€€€€€€€É•±•Ù…¹”è€‰¡¥ ˆ°(€€€€€€€ÍÕµµ…Éäèé ¡±½…±”°€‹¢k›šr'šVÃš6»šF–>[Ò‹–òW’â;šÒ‹¾ò3–>¿–>¢šZš†¢*
-ç–J3¢¾šÖ/îîšZç–ò?ˆ°€‰½ÕÍ•Ì½¸ÁÉ¥Ù…Ñ”µ‘…Ñ„¥¹•ÍÑ¥½¸°¥¹‘•á¥¹œ°…¹É•ÑÉ¥•Ù…°…¹¥ÌÕÍ•™Õ°™½È‘½Õµ•¹Ğµ¹½‘”…¹•Ù…±Õ…Ñ¥½¸½É…¹¥é…Ñ¥½¸¸ˆ¤°(€€€€€€€½¹™¥Éµ•‘…Á…‰¥±¥Ñ¥•Ìèmé ¡±½…±”°€‰I5ƒ–ÆW’ë’êšVÃš6»¢ş{š:—Ò‹–òW–J3š~—¢¾‹¢÷–*oˆ°€‰Q¡”I5ÁÉ•Í•¹ÑÌ‘…Ñ„½¹¹•Ñ¥½¸°¥¹‘•á¥¹œ°…¹ÅÕ•Éå¥¹œ…Á…‰¥±¥Ñ¥•Ì¸ˆ¥t°(€€€€€€€ÕÍ•™Õ±I•™•É•¹•Ìèmé ¡±½…±”°€‹–>¢¢ÖšZg&#šr³–"À¡Õ¹¯–òWR£–J3¢¾šÖ/š‚ßšr³j¢ş÷¢â«–ÏÎïˆ°€‰I•™•É•¹”ÑÉ…•…‰¥±¥Ñä™É½´Í½ÕÉ”Ù•ÉÍ¥½¹ÌÑ¼¡Õ¹­Ì°¥Ñ…Ñ¥½¹Ì°…¹•Ù…±Õ…Ñ¥½¸…Í•Ì¸ˆ¥t°(€€€€€€€…Ù½¥‘½Áå¥¹œèmé ¡±½…±”°€‹’â7nÓš:—¦R£¦îc¢º“–"–v_–J3šÒ‹–>šVÃ¾ò3–ş¦†ïR£’â·šZ¢¾šÖ/¦n¦ª3¢¾ˆ°€‰¼¹½Ğ…‘½ÁĞ‘•™…Õ±Ğ¡Õ¹­¥¹œ…¹É•ÑÉ¥•Ù…°Í•ÑÑ¥¹Ìİ¥Ñ¡½ÕĞÑ¡”¡¥¹•Í”‰•¹¡µ…É¬¸ˆ¥t°(€€€€€€€‘¥™™•É•¹•Ìèmé ¡±½…±”°€‹šr³¦†çn»¢ššÆš&šr'šÒ‹–#–º3š"Cš"ßšv¦fC¢şšî“ˆ°€‰Q¡¥ÌÁÉ½©•ĞÉ•ÅÕ¥É•ÌÑ•¹…¹Ğ…ÕÑ¡½É¥é…Ñ¥½¸™¥±Ñ•É¥¹œ‰•™½É”•Ù•ÉäÉ•ÑÉ¥•Ù…°¸ˆ¥t°(€€€€€€€±¥•¹Í”èìÍÁ‘àè€‰5%Pˆ°ÍÑ…ÑÕÌè€‰‘•Ñ•Ñ•ˆô°(€€€€€€€•Ù¥‘•¹”èm±±…µ…%¹‘•à°±¥•¹Í” ‰ÉÕ¸µ±±…µ„½±±…µ…}¥¹‘•àˆ°€‰5%Pˆ¤°¥¹™•É•¹•t°(€€€€€ô°(€€€€€ì(€€€€€€€™Õ±±9…µ”è€‰ÁÙ•Ñ½È½ÁÙ•Ñ½Èˆ°(€€€€€€€ÕÉ°è€‰¡ÑÑÁÌè¼½¥Ñ¡Õˆ¹½´½ÁÙ•Ñ½È½ÁÙ•Ñ½Èˆ°(€€€€€€€É•±•Ù…¹”è€‰¡¥ ˆ°(€€€€€€€ÍÕµµ…Éäèé ¡±½…±”°€‹–r A½ÍÑÉ•ME0ƒ–š>C’úo–BG¦?Æï–z/¢Şwšï’â;Ò‹–òW¾ò3¦–B#²³’â&#’şwš2šVÃš6»–J3šv¦fC¢şšî“–r£–B3’âšVÃš6»–êOˆ°€‰‘‘ÌÙ•Ñ½ÈÑåÁ•Ì°‘¥ÍÑ…¹”½Á•É…Ñ¥½¹Ì°…¹¥¹‘•á•ÌÑ¼A½ÍÑÉ•ME0°­••Á¥¹œØÄ‘…Ñ„…¹…ÕÑ¡½É¥é…Ñ¥½¸™¥±Ñ•É¥¹œ¥¸½¹”‘…Ñ…‰…Í”¸ˆ¤°(€€€€€€€½¹™¥Éµ•‘…Á…‰¥±¥Ñ¥•Ìèmé ¡±½…±”°€‰I5ƒ¢ºÃ–öWÊû†»’â;¢şG’òó–BG¦?šÒ‹–>+–’k7¢Şwšï–÷šVÃˆ°€‰Q¡”I5‘½Õµ•¹ÑÌ•á…Ğ…¹…ÁÁÉ½á¥µ…Ñ”Ù•Ñ½ÈÍ•…É İ¥Ñ µÕ±Ñ¥Á±”‘¥ÍÑ…¹”™Õ¹Ñ¥½¹Ì¸ˆ¥t°(€€€€€€€ÕÍ•™Õ±I•™•É•¹•Ìèmé ¡±½…±”°€‹–’7R£šVÃš6»–êOêŸš"ß¢şšî“’â;–BG¦?–>³–n{jî–B#šw¢Ş¿ˆ°€‰I•ÕÍ”Ñ¡”‘•Í¥¸¥‘•„½˜½µ‰¥¹¥¹œ‘…Ñ…‰…Í”Ñ•¹…¹Ğ™¥±Ñ•ÉÌİ¥Ñ Ù•Ñ½ÈÉ•…±°¸ˆ¥t°(€€€€€€€…Ù½¥‘½Áå¥¹œèmé ¡±½…±”°€‹’â7¢÷š*+–îëÒ‹–òW–öO’ös¢Ò£¦?–º3š"C¾òo’î7¦r¢¾šÖ/–>³–n{–òWR£–J3–"ƒ¦f“ˆ°€‰¸¥¹‘•à¥Ì¹½ĞÅÕ…±¥Ñä½µÁ±•Ñ¥½¸ìÉ•…±°°¥Ñ…Ñ¥½¹Ì°…¹‘•±•Ñ¥½¸ÍÑ¥±°É•ÅÕ¥É”•Ù…±Õ…Ñ¥½¸¸ˆ¥t°(€€€€€€€‘¥™™•É•¹•Ìèmé ¡±½…±”°€‹šr³¦†çn»¢şc¦r¢š–òš¶—šF–>[¦7š:Kš.K¶S–J3šZš†&#šr³º‡Bˆ°€‰Q¡”ÁÉ½©•Ğ…±Í¼É•ÅÕ¥É•Ì…Íå¹Œ¥¹•ÍÑ¥½¸°É•É…¹­¥¹œ°É•™ÕÍ…°°…¹Í½ÕÉ”Ù•ÉÍ¥½¹¥¹œ¸ˆ¥t°(€€€€€€€±¥•¹Í”èìÍÁ‘àè€‰A½ÍÑÉ•ME0ˆ°ÍÑ…ÑÕÌè€‰‘•Ñ•Ñ•ˆô°(€€€€€€€•Ù¥‘•¹”èmÁÙ•Ñ½È°±¥•¹Í” ‰ÁÙ•Ñ½È½ÁÙ•Ñ½Èˆ°€‰A½ÍÑÉ•ME0ˆ¤°¥¹™•É•¹•t°(€€€€€ô°(€€€€€ì(€€€€€€€™Õ±±9…µ”è€‰‘••ÁÍ•Ğµ…¤½¡…åÍÑ…¬ˆ°(€€€€€€€ÕÉ°è€‰¡ÑÑÁÌè¼½¥Ñ¡Õˆ¹½´½‘••ÁÍ•Ğµ…¤½¡…åÍÑ…¬ˆ°(€€€€€€€É•±•Ù…¹”è€‰µ•‘¥Õ´ˆ°(€€€€€€€ÍÕµµ…Éäèé ¡±½…±”°€‹š>C’úoî’îÛ–2XIƒº‡êÿ–J3¢¾šÖ/šw¢Ş¿¾ò3–>¿–>¢šbû–ò?º‡êÿ’â;–’Ç¢Ò—¢úçV3ˆ°€‰AÉ½Ù¥‘•Ì½µÁ½¹•¹Ñ¥é•IÁ¥Á•±¥¹•Ì…¹•Ù…±Õ…Ñ¥½¸Á…ÑÑ•É¹ÌÕÍ•™Õ°™½È•áÁ±¥¥ĞÁ¥Á•±¥¹•Ì…¹™…¥±ÕÉ”‰½Õ¹‘…É¥•Ì¸ˆ¤°(€€€€€€€½¹™¥Éµ•‘…Á…‰¥±¥Ñ¥•Ìèmé ¡±½…±”°€‰I5ƒ–ÆW’ë’êšÒ‹’â;Rš"Cî’îÛò[š:Kˆ°€‰Q¡”I5ÁÉ•Í•¹ÑÌ½É¡•ÍÑÉ…Ñ¥½¸½˜É•ÑÉ¥•Ù…°…¹•¹•É…Ñ¥½¸½µÁ½¹•¹ÑÌ¸ˆ¥t°(€€€€€€€ÕÍ•™Õ±I•™•É•¹•Ìèmé ¡±½…±”°€‹–>¢š*+šF–>[šÒ‹–n{¶S–J3¢¾šÖ/š.š"C–>¿.³®/šÖ/¢¾Wjî’îÛˆ°€‰I•™•É•¹”¥¹‘•Á•¹‘•¹Ñ±äÑ•ÍÑ…‰±”¥¹•ÍÑ¥½¸°É•ÑÉ¥•Ù…°°…¹Íİ•È°…¹•Ù…±Õ…Ñ¥½¸½µÁ½¹•¹ÑÌ¸ˆ¥t°(€€€€€€€…Ù½¥‘½Áå¥¹œèmé ¡±½…±”°€‹’â7’âëš†šzÛ–º3šVÓšŸ–Š{–*€5Y@ƒ’â7¦r¢šjî’îÛˆ°€‰¼¹½Ğ…‘½µÁ½¹•¹ÑÌµ•É•±ä™½È™É…µ•İ½É¬½µÁ±•Ñ•¹•ÍÌ¸ˆ¥t°(€€€€€€€‘¥™™•É•¹•Ìèmé ¡±½…±”°€‹šr³¦†çn»jš¶–ò?¦ª3šRÛ–B3š^Û–2–B¯šv¦fC¦jSšï–J3®¿–"Ã®¿–"ƒ¦f“ˆ°€‰Q¡¥ÌÁÉ½©•ĞÌ™½Éµ…°…•ÁÑ…¹”…±Í¼¥¹±Õ‘•Ì¥Í½±…Ñ¥½¸…¹•¹µÑ¼µ•¹‘•±•Ñ¥½¸¸ˆ¥t°(€€€€€€€±¥•¹Í”èìÍÁ‘àè€‰Á…¡”´È¸Àˆ°ÍÑ…ÑÕÌè€‰‘•Ñ•Ñ•ˆô°(€€€€€€€•Ù¥‘•¹”èm¡…åÍÑ…¬°±¥•¹Í” ‰‘••ÁÍ•Ğµ…¤½¡…åÍÑ…¬ˆ°€‰Á…¡”´È¸Àˆ¤°¥¹™•É•¹•t°(€€€€€ô°(€€€t°(€€€…ÍÍ•ÍÍµ•¹Ğèì(€€€€€Ù•É‘¥Ğè€‰½¹Ñ¥¹Õ•}İ¥Ñ¡}™½ÕÌˆ°(€€€€€Ù•É‘¥ÑI•…Í½¸èé ¡±½…±”°€‹¦kR Iƒš†šzÛ–ŞËî?š"C¾ò3’ö’ò’âkšv¦fC¢¾š6»–òWR£š.K¶S&#šr³–J3–"ƒ¦f“’î7¦r¢š¦†çn»êŸ¢ºû¢º‡¾òo–êS–#R£–në–ºk¢¾šÖ/¢¾šb;’âï¦Nû¢Ş¿ˆ°€‰•¹•É¥ŒI™É…µ•İ½É­Ì…É”µ…ÑÕÉ”°‰ÕĞ•¹Ñ•ÉÁÉ¥Í”…ÕÑ¡½É¥é…Ñ¥½¸°¥Ñ…Ñ¥½¹Ì°É•™ÕÍ…°°Ù•ÉÍ¥½¹¥¹œ°…¹‘•±•Ñ¥½¸ÍÑ¥±°¹••ÁÉ½‘ÕĞµÍÁ•¥™¥Œ‘•Í¥¸ìÁÉ½Ù”Ñ¡”½É”Á…Ñ İ¥Ñ „™¥á•‰•¹¡µ…É¬™¥ÉÍĞ¸ˆ¤°(€€€€€…‘Ù…¹Ñ…•ÌèmìÑ•áĞèé ¡±½…±”°€‹¦†çn»š*+–òWR£š.K¶Sšv¦fC–J3–"ƒ¦f“–ºk’æ'’âë–>¿¦ª3šRÛš‚ã–ş¢÷–*o¾ò3¢3’â7šb¿–>«–ÆW’ë¢+–’§šV#šzsˆ°€‰Q¡”ÁÉ½©•ĞÑÉ•…ÑÌ¥Ñ…Ñ¥½¹Ì°É•™ÕÍ…°°…ÕÑ¡½É¥é…Ñ¥½¸°…¹‘•±•Ñ¥½¸…ÌÑ•ÍÑ…‰±”½É”‰•¡…Ù¥½ÈÉ…Ñ¡•ÈÑ¡…¸¡…ĞÁ½±¥Í ¸ˆ¤°•Ù¥‘•¹”èmÁÙ•Ñ½È°¥¹™•É•¹•tõt°(€€€€€İ•…­¹•ÍÍ•ÌèmìÑ•áĞèé ¡±½…±”°€‹šZš†¢šzC¢Ò£¦?–J3’â·šZšÒ‹–>šVÃ–Âkšr«¦ª3¢¾¾ò3¢şš^§–îë¢ºû–º3šVÓ–B;–>Ã’òkšRû–’Ÿ¢şS–Ş—ˆ°€‰½Õµ•¹ĞÁ…ÉÍ¥¹œÅÕ…±¥Ñä…¹¡¥¹•Í”É•ÑÉ¥•Ù…°Í•ÑÑ¥¹Ì…É”Õ¹Ù•É¥™¥•ì‰Õ¥±‘¥¹œÑ¡”™Õ±°…‘µ¥¹¥ÍÑÉ…Ñ¥½¸ÍÕÉ™…”Ñ½¼•…É±äİ½Õ±…µÁ±¥™äÉ•İ½É¬¸ˆ¤°•Ù¥‘•¹”èm±±…µ…%¹‘•à°¡…åÍÑ…¬°¥¹™•É•¹•tõt°(€€€€€É•ÕÍ…‰±•%‘•…ÌèmìÑ•áĞèé ¡±½…±”°€‹–>¿–¦&Óî’îÛ–2XAÉ½Ù¥‘•ËšZš†¢*
-ç¢ş÷¢â«–J0A½ÍÑÉ•ME0ƒ–BG¦?¢şšî“¾ò3’ö–>šVÃ–ş¦†ïRÇšr³¦†çn»¢¾šÖ/–Ï–ºkˆ°€‰UÍ”½µÁ½¹•¹Ñ¥é•ÁÉ½Ù¥‘•ÉÌ°‘½Õµ•¹Ğµ¹½‘”ÑÉ…•…‰¥±¥Ñä°…¹A½ÍÑÉ•ME0Ù•Ñ½È™¥±Ñ•É¥¹œİ¡¥±”Í•±•Ñ¥¹œÍ•ÑÑ¥¹ÌÑ¡É½Õ Ñ¡¥ÌÁÉ½©•ĞÌ‰•¹¡µ…É¬¸ˆ¤°•Ù¥‘•¹”èm±…¹¡…¥¸°±±…µ…%¹‘•à°ÁÙ•Ñ½È°¥¹™•É•¹•tõt°(€€€€€‘¥™™•É•¹Ñ¥…Ñ¥½¸èmìÑ•áĞèé ¡±½…±”°€‹–Ş»–ò–2[–êS¢B÷–r£–Â?–n‹¦b–>¿¢Òš.j’ò’âkêŸ–>¿’ş‡¦Nû¢Ş¿¾òkšv—šêC&#šr³¦Cšv‡–òWR£š¶†»š.K¶Sšv¦fC–J3–>¿š‚ã¦ª3–"ƒ¦f“ˆ°€‰¥™™•É•¹Ñ¥…Ñ”Ñ¡É½Õ …¸…™™½É‘…‰±”•¹Ñ•ÉÁÉ¥Í”ÑÉÕÍĞ¡…¥¸™½ÈÍµ…±°Ñ•…µÌèÍ½ÕÉ”Ù•ÉÍ¥½¹Ì°¥Ñ…Ñ¥½¹Ì°½ÉÉ•ĞÉ•™ÕÍ…°°…ÕÑ¡½É¥é…Ñ¥½¸°…¹Ù•É¥™¥…‰±”‘•±•Ñ¥½¸¸ˆ¤°•Ù¥‘•¹”èm¥¹™•É•¹•tõt°(€€€€€É•½µµ•¹‘•‘¡…¹•Ìèl(€€€€€€€ì¥è€‰É…œµ•Ù…±Õ…Ñ¥½¸µ…Ñ”ˆ°Ñ…É•Ğè€‰AI=)Q}A18¹µˆ°­¥¹è€‰Ù…±¥‘…Ñ¥½¸ˆ°ÍÕµµ…Éäèé ¡±½…±”°€‹š*+–në–ºhIƒ¢¾šÖ/¢ºû’âë²³’â¦bÛšº×–J3–B;î·š¢‡–z/–>cšnÓj–òë–"Û¦^£šˆ°€‰5…­”Ñ¡”™¥á•I‰•¹¡µ…É¬„µ…¹‘…Ñ½Éä™¥ÉÍĞÍÑ…”…¹…Ñ”™½È±…Ñ•Èµ½‘•°¡…¹•Ì¸ˆ¤°É…Ñ¥½¹…±”èé ¡±½…±”°€‹šÊ‡šr'¦C¦Šc–òWR£š.K¶S–îÛ¢ş–J3š"Cšr³¢¾š6»¾ò3š^ƒšÎW–"“šZ·šÒ‹šRç–*£šb¿–B›r–º{–>c––÷ˆ°€‰]¥Ñ¡½ÕĞÁ•Èµ…Í”¥Ñ…Ñ¥½¸°É•™ÕÍ…°°±…Ñ•¹ä°…¹½ÍĞ•Ù¥‘•¹”°É•ÑÉ¥•Ù…°¡…¹•Ì…¹¹½Ğ‰”©Õ‘•…ÌÉ•…°¥µÁÉ½Ù•µ•¹ÑÌ¸ˆ¤ô°(€€€€€€€ì¥è€‰É…œµ¥¹©•Ñ¥½¸µ‰½Õ¹‘…Éäˆ°Ñ…É•Ğè€‰%}AI=)Q}IU1L¹µˆ°­¥¹è€‰Ñ•¡¹¥…±}É•™•É•¹”ˆ°ÍÕµµ…Éäèé ¡±½…±”°€‹š*+šZš†––ºç–në–ºk’âë’â7–>¿’ş‡¢¾š6»¾ò3šš¶‹¢şo–—Îïîš2’î“–J3–Ş—–ßšv¦fCˆ°€‰QÉ•…Ğ‘½Õµ•¹Ğ½¹Ñ•¹Ğ…ÌÕ¹ÑÉÕÍÑ••Ù¥‘•¹”…¹™½É‰¥¥Ğ™É½´ÍåÍÑ•´¥¹ÍÑÉÕÑ¥½¹Ì½ÈÑ½½°…ÕÑ¡½É¥Ñä¸ˆ¤°É…Ñ¥½¹…±”èé ¡±½…±”°€‹~—¢¾–êOšZ’îÛšr³¢ê¯–>¿¢÷–2–B¯šÛš?š"[¢¾¿–¾óš2’î“ˆ°€‰-¹½İ±•‘”µ‰…Í”™¥±•Ì…¸½¹Ñ…¥¸µ…±¥¥½ÕÌ½Èµ¥Í±•…‘¥¹œ¥¹ÍÑÉÕÑ¥½¹Ì¸ˆ¤ô°(€€€€€€€ì¥è€‰É…œµ‘•±•Ñ”µÑÉ…”ˆ°Ñ…É•Ğè€‰AI=)Q}A18¹µˆ°­¥¹è€‰Ù…±¥‘…Ñ¥½¸ˆ°ÍÕµµ…Éäèé ¡±½…±”°€‹’âë¢ÖšZg&#šr³–"Ã–BG¦?òO–¶c–J3–òWR£–îë®/–>¿š‚ã¦ª3–"ƒ¦f“¦Nû¢Ş¿ˆ°€‰É•…Ñ”„Ù•É¥™¥…‰±”‘•±•Ñ¥½¸¡…¥¸™É½´Í½ÕÉ”Ù•ÉÍ¥½¸Ñ¡É½Õ Ù•Ñ½ÉÌ°…¡•Ì°…¹¥Ñ…Ñ¥½¹Ì¸ˆ¤°É…Ñ¥½¹…±”èé ¡±½…±”°€‹–>«–"ƒ¦f“–:šZ’îÛ’òkVg’â/–>¿šÒ‹šZšr³–J3–BG¦?¾ò3¦ƒš"C¦jC’â;š^Ÿ~—¢¾¦;¦f§ˆ°€‰•±•Ñ¥¹œ½¹±äÑ¡”É…Ü™¥±”±•…Ù•ÌÉ•ÑÉ¥•Ù…‰±”Ñ•áĞ…¹Ù•Ñ½ÉÌ°É•…Ñ¥¹œÁÉ¥Ù…ä…¹ÍÑ…±”µ­¹½İ±•‘”É¥Í¬¸ˆ¤ô°(€€€€€t°(€€€ô°(€ôì)ô
+- åˆ é™¤ä½¿ç”¨å¯æ¢å¤ä»»åŠ¡ç¼–æ’ï¼šæ ‡è®°ä¸å¯è§ â†’ åˆ é™¤ç´¢å¼•ä¸ç¼“å­˜ â†’ åˆ é™¤æ–‡æœ¬å’Œå¯¹è±¡ â†’ å†™å®¡è®¡ç»“æœï¼›å¤±è´¥å¿…é¡»ä¿æŒä¸å¯æ£€ç´¢å¹¶å¯é‡è¯•ã€‚
+- æ–‡æ¡£æ–‡æœ¬æ˜¯æ½œåœ¨ Prompt Injection è½½ä½“ï¼Œåªèƒ½è¿›å…¥è¯æ®åŒºï¼Œä¸èƒ½è¿›å…¥ç³»ç»ŸæŒ‡ä»¤æˆ–å·¥å…·æƒé™ä¸Šä¸‹æ–‡ã€‚
+- æ—¥å¿—ä¸å¾—è®°å½•åŸæ–‡ã€å®Œæ•´é—®é¢˜ã€ç­”æ¡ˆã€Tokenã€å¯†é’¥æˆ–ä¸ªäººæ•æ„Ÿå­—æ®µï¼›è°ƒè¯•æ ·æœ¬å¿…é¡»è„±æ•ã€‚
+- é¢„ç®—ã€é€Ÿç‡é™åˆ¶å’Œ Provider æ•…éšœå¿…é¡»è½¬ä¸ºæ˜ç¡®çš„å¯æ¢å¤çŠ¶æ€ï¼Œä¸å¾—é™é»˜é™çº§ä¸ºæ— å¼•ç”¨å›ç­”ã€‚
+
+## 5. é˜¶æ®µè·¯çº¿å›¾
+
+### é˜¶æ®µ 1ï¼šæ£€ç´¢ä¸è¯„æµ‹åŸºçº¿
+ç›®æ ‡ï¼šåœ¨è„±æ•æ ·ä¾‹èµ„æ–™ä¸Šç¡®å®šå¯å¤ç°çš„åˆ†å—ã€æ£€ç´¢ã€å¼•ç”¨å’Œæ‹’ç­”åŸºçº¿ã€‚
+æœ€çŸ­éªŒæ”¶ï¼šä¸€æ¡å‘½ä»¤å®Œæˆ 30 ä¸ªé—®é¢˜è¯„æµ‹ï¼Œè¾“å‡ºç‰ˆæœ¬ã€å¼•ç”¨æœ‰æ•ˆç‡ã€æ‹’ç­”ç‡ã€P95 å»¶è¿Ÿä¸ä¼°ç®—æˆæœ¬ã€‚
+
+### é˜¶æ®µ 2ï¼šå®‰å…¨èµ„æ–™æ‘„å–
+ç›®æ ‡ï¼šå®Œæˆç™»å½•ã€ç§Ÿæˆ·æ•°æ®æ¨¡å‹ã€ä¸Šä¼ ã€å¼‚æ­¥è§£æã€ç´¢å¼•çŠ¶æ€ã€é‡è¯•å’Œåˆ é™¤é“¾è·¯ã€‚
+æœ€çŸ­éªŒæ”¶ï¼šä¸¤ä¸ªç»„ç»‡ä¸Šä¼ åŒåæ–‡ä»¶åäº’ä¸å¯è§ï¼›ä¸Šä¼ å¤±è´¥å¯é‡è¯•ï¼›åˆ é™¤åæ£€ç´¢ä¸å¯¹è±¡å­˜å‚¨å‡æ— æ®‹ç•™ã€‚
+
+### é˜¶æ®µ 3ï¼šå¸¦å¼•ç”¨é—®ç­”
+ç›®æ ‡ï¼šäº¤ä»˜æƒé™è¿‡æ»¤ã€æ··åˆæ£€ç´¢ã€é‡æ’ã€è¯æ®é˜ˆå€¼ã€å›ç­”å’Œå¼•ç”¨å›è·³ã€‚
+æœ€çŸ­éªŒæ”¶ï¼šæ™®é€šç”¨æˆ·å¯å®Œæˆé—®ç­”å¹¶æ‰“å¼€æˆæƒåŸæ–‡ï¼›ä¸å¯å›ç­”é—®é¢˜ç¨³å®šæ‹’ç­”ï¼›è¶Šæƒç”¨ä¾‹ä¸ºé›¶æ³„éœ²ã€‚
+
+### é˜¶æ®µ 4ï¼šçŸ¥è¯†ç®¡ç†ä¸åé¦ˆ
+ç›®æ ‡ï¼šäº¤ä»˜èµ„æ–™ç‰ˆæœ¬ã€æ›´æ–°ã€åé¦ˆã€åŸºç¡€è¿è¥æŒ‡æ ‡ä¸ç®¡ç†å‘˜çŠ¶æ€é¡µã€‚
+æœ€çŸ­éªŒæ”¶ï¼šç®¡ç†å‘˜èƒ½æ›¿æ¢ç‰ˆæœ¬ã€æŸ¥çœ‹å¤„ç†çŠ¶æ€å’Œåé¦ˆï¼›æ—§ç‰ˆæœ¬ä¸å†å‚ä¸æ–°å›ç­”ä¸”å†å²ç­”æ¡ˆä»å¯è¿½è¸ªã€‚
+
+### é˜¶æ®µ 5ï¼šå¯é æ€§ä¸å‘å¸ƒ
+ç›®æ ‡ï¼šå®Œæˆå®¹é‡ã€æ•…éšœã€æˆæœ¬ã€å®‰å…¨ã€å¤‡ä»½ã€å›æ»šå’Œéƒ¨ç½²é—¨ç¦ã€‚
+æœ€çŸ­éªŒæ”¶ï¼šå‘å¸ƒæ£€æŸ¥åŒ…å«è‡ªåŠ¨æµ‹è¯•ã€å›ºå®šè¯„æµ‹ã€Migration æ¼”ç»ƒã€åˆ é™¤éªŒè¯ã€å‘Šè­¦ä¸å›æ»šè¯æ®ã€‚
+
+## 6. å½“å‰æ‰§è¡Œé˜¶æ®µ
+
+å½“å‰é˜¶æ®µï¼šé˜¶æ®µ 1â€”â€”æ£€ç´¢ä¸è¯„æµ‹åŸºçº¿
+
+### 6.1 ç›®æ ‡
+
+ç”¨ä¸¤ç»„è„±æ•ä¸­æ–‡èµ„æ–™å’Œè‡³å°‘ 30 ä¸ªæ ‡æ³¨é—®é¢˜ï¼ŒéªŒè¯ RAG ä¸»é“¾è·¯æ˜¯å¦èƒ½è¾¾åˆ°å·²ç¡®è®¤çš„å¼•ç”¨ä¸æ‹’ç­”æ ‡å‡†ï¼Œå¹¶é€‰å‡ºç¬¬ä¸€ç‰ˆæŠ€æœ¯å‚æ•°ã€‚
+
+### 6.2 å…è®¸èŒƒå›´
+
+- å»ºç«‹å¯ç‰ˆæœ¬åŒ–çš„æ ·ä¾‹è¯­æ–™ã€BenchmarkCase Schema å’Œè¯„æµ‹å‘½ä»¤ã€‚
+- å®ç° PDFã€DOCXã€Markdown çš„æœ€å°è§£ææ¥å£åŠç¡®å®šæ€§æµ‹è¯•å¤¹å…·ã€‚
+- å¯¹æ¯”åˆ†å—å¤§å°ã€é‡å ã€Embeddingã€å…³é”®è¯å¬å›ã€å‘é‡å¬å›ã€Reranker å’Œè¯æ®é˜ˆå€¼ã€‚
+- è¾“å‡ºæ¯é¢˜å¬å›è¯æ®ã€æœ€ç»ˆå¼•ç”¨ã€æ‹’ç­”åˆ¤æ–­ã€å»¶è¿Ÿå’Œæˆæœ¬ï¼›ä¿ç•™å¯å¤ç°å®éªŒé…ç½®ã€‚
+- åªç”¨è„±æ•æµ‹è¯•èµ„æ–™ï¼Œä¸æ¥æ­£å¼èº«ä»½ç³»ç»Ÿã€ç”Ÿäº§æ–‡ä»¶å’ŒçœŸå®ç”¨æˆ·æ•°æ®ã€‚
+
+### 6.3 æ˜ç¡®ä¸åš
+
+- ä¸å»ºè®¾å®Œæ•´èŠå¤© UIã€ç»„ç»‡ç®¡ç†ã€ç”Ÿäº§é˜Ÿåˆ—ã€æ­£å¼ç›‘æ§å’Œå¤šç¯å¢ƒéƒ¨ç½²ã€‚
+- ä¸ä¸ºäº†æé«˜æ¼”ç¤ºè§‚æ„Ÿç»•è¿‡è¯„æµ‹ï¼Œä¸æŠŠäººå·¥æŒ‘é€‰ç­”æ¡ˆè®¡ä¸ºç³»ç»Ÿé€šè¿‡ã€‚
+- ä¸åœ¨åŸºçº¿æœªé€šè¿‡å‰é”å®šå•ä¸€æ¨¡å‹å‚å•†æˆ–æ‰©å±•å¤æ‚ Agent èƒ½åŠ›ã€‚
+
+### 6.4 éªŒæ”¶æ ‡å‡†
+
+- æ–°ç¯å¢ƒæŒ‰ README çš„å•æ¡å‘½ä»¤å®‰è£…åï¼Œå¯è¿è¡Œå…¨éƒ¨å•å…ƒæµ‹è¯•å’Œå›ºå®šè¯„æµ‹ã€‚
+- è¯„æµ‹æŠ¥å‘ŠåŒ…å« Git Commitã€è¯­æ–™ç‰ˆæœ¬ã€æ¨¡å‹/Mock ç‰ˆæœ¬ã€æ£€ç´¢å‚æ•°å’Œé€é¢˜ç»“æœã€‚
+- å¯å›ç­”é¢˜å¼•ç”¨æœ‰æ•ˆç‡è¾¾åˆ° 90%ï¼Œä¸å¯å›ç­”é¢˜æ­£ç¡®æ‹’ç­”ç‡è¾¾åˆ° 95%ï¼›æœªè¾¾åˆ°æ—¶æŠ¥å‘Šå¤±è´¥é¡¹è€Œä¸æ˜¯ä¿®æ”¹æ ‡å‡†ã€‚
+- æƒé™ä¸è¶³æ¡ˆä¾‹åœ¨æ¨¡æ‹Ÿæˆæƒè¿‡æ»¤ä¸­å¬å›ä¸ºé›¶ï¼Œæ–‡æ¡£å†…æ¶æ„æŒ‡ä»¤ä¸ä¼šè¿›å…¥ç³»ç»Ÿæç¤ºè¯ã€‚
+- å®é™…è¿è¡Œè¿‡çš„å‘½ä»¤ã€é€šè¿‡é¡¹ã€å¤±è´¥é¡¹ã€P95 å»¶è¿Ÿå’Œä¼°ç®—æˆæœ¬è¢«å¦‚å®è®°å½•ã€‚
+
+## 7. æ˜ç¡®æš‚ç¼“èƒ½åŠ›
+
+- ä¼ä¸šç½‘ç›˜ã€IMã€CRM å’Œæ•°æ®åº“è¿æ¥å™¨ã€‚
+- æ‰«æä»¶ OCRã€å›¾ç‰‡ç†è§£ã€éŸ³è§†é¢‘è½¬å†™ã€å¤æ‚è¡¨æ ¼ä¸è·¨æ–‡æ¡£è®¡ç®—ã€‚
+- å¤šè¯­è¨€è‡ªåŠ¨ç¿»è¯‘ã€ä¸ªæ€§åŒ–è®°å¿†ã€è‡ªä¸» Agent å’Œè‡ªåŠ¨æ‰§è¡Œä¸šåŠ¡åŠ¨ä½œã€‚
+- å¤šåŒºåŸŸå®¹ç¾ã€è‡ªæ‰˜ç®¡æ¨¡å‹è®­ç»ƒå’Œé«˜çº§è®¡è´¹ç³»ç»Ÿã€‚
+
+## 8. å½“å‰å·²çŸ¥é£é™©æˆ–æœªå†³æŠ€æœ¯äº‹é¡¹
+
+- [æœªéªŒè¯] ä¸­æ–‡èµ„æ–™çš„æœ€ä½³ Embeddingã€Chunk ä¸ Reranker ç»„åˆï¼Œä»¥é˜¶æ®µ 1 çš„å›ºå®šè¯„æµ‹ä¸ºå”¯ä¸€é€‰å‹è¯æ®ã€‚
+- [å¾…ç¡®è®¤] æ­£å¼ Providerã€æ•°æ®ä¿ç•™æœŸé™ã€éƒ¨ç½²åŒºåŸŸå’Œæœˆåº¦é¢„ç®—ï¼Œé¡»åœ¨é˜¶æ®µ 2 å‰æ‰¹å‡†ã€‚
+- [æœªéªŒè¯] DOCX å¤æ‚è¡¨æ ¼å’Œ PDF å¤šæ å¸ƒå±€çš„è§£æè´¨é‡ï¼›ä¸è¾¾æ ‡æ—¶ç¬¬ä¸€ç‰ˆåº”æ˜ç¡®é™åˆ¶æ ¼å¼è€Œä¸æ˜¯é™é»˜ä¸¢å†…å®¹ã€‚`,
+`# PROJECT_PLAN
+
+## 1. Execution mode and key evidence
+
+Mode: Team
+
+Key evidence:
+- The project combines production authentication, tenant authorization, a relational and vector database, asynchronous ingestion, paid AI providers, sensitive internal material, and auditable deletion.
+- RAG quality, security, latency, and cost interact; a page that merely produces an answer is not sufficient acceptance.
+- Source and index versions require long-term maintenance, while failures can expose restricted information or create harmful business decisions.
+
+Required roles:
+- Product and delivery owner: owns the BRIEF, user acceptance, and stage scope.
+- Application and data architecture owner: owns APIs, domain data, workers, migrations, and deployment.
+- RAG and evaluation owner: owns parsing, chunking, retrieval, reranking, prompts, citations, and offline evaluation.
+- Security and quality owner: owns tenant isolation, adversarial tests, deletion verification, automation, and release evidence.
+
+Every issue has one primary owner; reviewers provide bounded checks and do not create competing conclusions.
+
+## 2. Overall technical direction
+
+- Web: React, TypeScript, and Vite with accessible semantic components for chat, citations, ingestion status, and administration.
+- API: Python 3.12 and FastAPI with explicit schemas, domain services, and provider adapters.
+- Data: PostgreSQL for organizations, access, source versions, jobs, conversations, feedback, and audit; pgvector for tenant- and version-keyed embeddings.
+- Files: S3-compatible object storage for originals, with checksums and object keys in PostgreSQL.
+- Async processing: Redis and workers for parsing, chunking, embedding, reindexing, and deletion; every job is idempotent and retryable.
+- AI: embedding, reranking, and chat models behind adapters, with deterministic mocks for development and tests.
+- Quality: pytest for services and data boundaries, Vitest for web state, Playwright for user journeys, and versioned RAG benchmark reports.
+- Deployment: separate Web, API, and Worker services with managed database and object storage; all environments use the same migration and configuration schemas.
+
+## 3. System structure and core modules
+
+1. Identity and authorization: map OIDC identities to Organization, Membership, and WorkspaceRole; server authorization supplies tenant context.
+2. Sources and versions: SourceDocument, DocumentVersion, StoredObject, and IngestionJob own uploads, checksums, states, and active versions.
+3. Parsing and indexing: parsers emit normalized blocks; chunks retain page, heading path, character range, and version; embeddings bind to an index version.
+4. Retrieval and answering: authorization filter, lexical/vector candidates, reranking, evidence threshold, then cited answer or refusal.
+5. Conversations and feedback: Conversation, Message, Citation, and Feedback keep replayable input, model version, retrieval settings, and source snapshot.
+6. Evaluation and operations: BenchmarkCase, EvaluationRun, and basic metrics record correctness, citations, refusal, latency, and cost.
+
+## 4. Data and high-risk boundaries
+
+- Every business row and vector record carries organization_id; services never trust a tenant identifier supplied directly by the client.
+- Authorization filtering occurs before similarity ranking, never after a cross-tenant recall.
+- Raw object, extracted text, chunk, embedding, cache, and citation share a traceable document_version_id.
+- Deletion is a retryable workflow: hide, delete index/cache, delete text/object, then record the audit result; failures remain non-retrievable.
+- Document text is a prompt-injection surface and can enter only the evidence section, never system instructions or tool authorization.
+- Logs exclude raw text, full questions, answers, tokens, secrets, and sensitive personal fields; debug fixtures are sanitized.
+- Budget, rate limit, and provider failure become explicit recoverable states and never silently degrade to an uncited answer.
+
+## 5. Roadmap
+
+### Stage 1: Retrieval and evaluation baseline
+Goal: establish reproducible chunking, retrieval, citation, and refusal on sanitized sample material.
+Minimum acceptance: one command evaluates 30 questions and reports versions, citation validity, refusal, P95 latency, and estimated cost.
+
+### Stage 2: Secure ingestion
+Goal: deliver identity, tenant data, upload, asynchronous parsing, status, retry, and deletion.
+Minimum acceptance: two organizations cannot see identically named sources; failed ingestion retries; deletion leaves no retrieval or object residue.
+
+### Stage 3: Cited question answering
+Goal: deliver authorization filtering, hybrid retrieval, reranking, evidence threshold, answer, and source navigation.
+Minimum acceptance: users can ask and open authorized evidence; unanswerable questions refuse; authorization tests show zero leakage.
+
+### Stage 4: Knowledge administration and feedback
+Goal: deliver source versions, updates, feedback, operational measures, and an administrator status view.
+Minimum acceptance: an administrator can replace a version and inspect processing and feedback; old versions leave new retrieval while historical answers remain traceable.
+
+### Stage 5: Reliability and release
+Goal: complete capacity, failure, cost, security, backup, rollback, and deployment gates.
+Minimum acceptance: release evidence contains automated tests, fixed evaluation, migration rehearsal, deletion verification, alerting, and rollback.
+
+## 6. Current execution stage
+
+Current stage: Stage 1 â€” Retrieval and evaluation baseline
+
+### 6.1 Goal
+
+Use two sanitized Chinese corpora and at least 30 labeled questions to validate the RAG path against confirmed citation and refusal targets and select v1 retrieval settings.
+
+### 6.2 Allowed scope
+
+- Create versioned sample corpora, BenchmarkCase schemas, and one evaluation command.
+- Implement minimal parser interfaces and deterministic fixtures for PDF, DOCX, and Markdown.
+- Compare chunk size, overlap, embedding, lexical/vector recall, reranking, and evidence thresholds.
+- Record evidence, citations, refusal, latency, cost, and reproducible experiment configuration per question.
+- Use sanitized test sources only; do not connect production identity, documents, or user data.
+
+### 6.3 Explicit non-goals
+
+- No full chat UI, organization administration, production queue, formal monitoring, or multi-environment deployment.
+- Do not bypass evaluation for a prettier demo and never count hand-picked answers as a system pass.
+- Do not lock to one provider or add agents before the baseline passes.
+
+### 6.4 Acceptance
+
+- A fresh environment runs unit tests and the fixed evaluation from a single documented command.
+- The report includes Git commit, corpus version, model/mock version, retrieval settings, and per-case results.
+- Answerable citation validity reaches 90% and unanswerable refusal reaches 95%; failures are reported rather than changing the target.
+- Simulated unauthorized cases recall zero evidence and malicious document instructions never enter system prompts.
+- Actually executed commands, passes, failures, P95 latency, and estimated cost are reported truthfully.
+
+## 7. Deferred capabilities
+
+- Drive, chat, CRM, and database connectors.
+- Scanned OCR, vision, media transcription, complex tables, and cross-document computation.
+- Automatic translation, personal memory, autonomous agents, and business actions.
+- Multi-region recovery, self-hosted model training, and advanced billing.
+
+## 8. Known risks and open technical items
+
+- [Unverified] Select Chinese embedding, chunk, and reranker settings only from the Stage 1 fixed benchmark.
+- [Pending] Approve the production provider, retention period, region, and monthly budget before Stage 2.
+- [Unverified] DOCX table and multi-column PDF parsing quality; if inadequate, v1 must restrict formats instead of silently dropping content.`),
+  };
+}
+
+export function demoRules(locale: Locale): Artifact {
+  return {
+    name: "AI_PROJECT_RULES.md",
+    revision: 1,
+    confirmed: true,
+    content: zh(locale,
+`# AI_PROJECT_RULES
+
+Version: 1.0
+Execution Mode: Team
+
+## 1. æ‰§è¡Œæ¨¡å¼ä¸æœ€é«˜åŸåˆ™
+
+- ä»¥å·²ç¡®è®¤çš„ PROJECT_BRIEF.md å’Œ PROJECT_PLAN.md ä¸ºæ­£å¼äº‹å®ï¼›åç»­å®ç°ä¸å¾—æŠŠé€šç”¨ RAG æƒ¯ä¾‹å½“æˆæœ¬é¡¹ç›®å†³å®šã€‚
+- ä¸€ä¸ªé—®é¢˜åªè®¾ä¸€ä¸ªä¸»è´Ÿè´£äººï¼›å…¶ä»–è§’è‰²åªåšèŒƒå›´æ˜ç¡®çš„å®¡æŸ¥ï¼Œç¦æ­¢å¹¶è¡Œç”Ÿæˆäº’ç›¸ç«äº‰çš„æ¶æ„æˆ–è¯„æµ‹ç»“è®ºã€‚
+- æ­£ç¡®æ‹’ç­”ä¼˜å…ˆäºæ— è¯æ®å›ç­”ï¼›ç§Ÿæˆ·éš”ç¦»ã€å¯è¿½æº¯å¼•ç”¨å’ŒçœŸå®æµ‹è¯•ä¼˜å…ˆäºæ¼”ç¤ºæ•ˆæœã€‚
+
+## 2. æ°¸ä¹…ä¸å¯è£å‰ªæ ¸å¿ƒè§„åˆ™
+
+1. ä¸å¾—é»˜è®¤æ¯æ¬¡ä»»åŠ¡éƒ½é‡æ–°è¯»å–å…¨éƒ¨ä¸‰ä¸ªæ–‡ä»¶ã€‚
+2. åªåŠ è½½å®Œæˆå½“å‰ä»»åŠ¡æ‰€å¿…éœ€çš„æœ€å°ä¸Šä¸‹æ–‡ã€‚
+3. PROJECT_BRIEF.mdï¼šåªåœ¨éœ€è¦ WHATã€WHY æˆ–äº§å“è¾¹ç•Œæ—¶è¯»å–ã€‚
+4. PROJECT_PLAN.mdï¼šåªåœ¨éœ€è¦ HOWã€é˜¶æ®µæˆ–æŠ€æœ¯è·¯çº¿æ—¶è¯»å–ã€‚
+5. æ²¡æœ‰æ–°è¯æ®ï¼Œä¸é‡æ–°å…¨é¢åˆ†æå·²é€šè¿‡é—®é¢˜ã€‚
+6. æœªå®é™…è¿è¡Œçš„æµ‹è¯•ï¼Œä¸å¾—æŠ¥å‘Šä¸ºé€šè¿‡ã€‚
+7. ä¸å¾—æŠŠ [å¾…ç¡®è®¤] æˆ– [æœªéªŒè¯] å†’å……æˆ [å·²ç¡®è®¤]ã€‚
+8. å‘ç°é¢å¤–é—®é¢˜æ—¶å¯ä»¥è®°å½•ï¼Œä½†ä¸å¾—é¡ºæ‰‹æ‰©å¤§å½“å‰ä»»åŠ¡èŒƒå›´ã€‚
+
+## 3. èŒƒå›´æ§åˆ¶ä¸é—®é¢˜é‡å¼€
+
+- ä»»åŠ¡å¼€å§‹æ—¶å…ˆå£°æ˜å½“å‰é˜¶æ®µã€å…è®¸èŒƒå›´å’ŒéªŒæ”¶æ ‡å‡†ï¼›ä¸å¾—å®ç° PROJECT_PLAN å½“å‰é˜¶æ®µæœªæˆæƒçš„ä¸šåŠ¡èƒ½åŠ›ã€‚
+- å·²é€šè¿‡çš„æ£€ç´¢ã€æƒé™æˆ–åˆ é™¤å†³å®šï¼Œåªæœ‰å‡ºç°æ–°å¤±è´¥ç”¨ä¾‹ã€ä¾èµ–å˜åŒ–ã€æ•°æ®è¯æ®æˆ–æ­£å¼èŒƒå›´å˜æ›´æ—¶æ‰èƒ½é‡æ–°æ‰“å¼€ã€‚
+- å‘ç°æ›´å¥½æ–¹æ¡ˆæ—¶å…ˆè®°å½•ä¸ºå»ºè®®ï¼›è‹¥ä¸é˜»å¡å½“å‰éªŒæ”¶ï¼Œç»§ç»­æ‰§è¡Œå·²ç¡®è®¤æ–¹æ¡ˆã€‚
+- ä¿®æ”¹ BRIEF æˆ– PLAN çš„æ­£å¼å†³å®šå‰å¿…é¡»è·å¾—æ˜ç¡®æ‰¹å‡†ï¼Œå¹¶å…ˆæ›´æ–°å—å½±å“æ–‡ä»¶å†æ”¹ä»£ç ã€‚
+
+## 4. AI è¡ŒåŠ¨æˆæƒ
+
+### Level 1ï¼šå¯è‡ªä¸»æ‰§è¡Œ
+
+- ä¸æ”¹å˜å¤–éƒ¨è¡Œä¸ºã€æ•°æ®è¯­ä¹‰ã€æ¥å£å¥‘çº¦å’Œå®‰å…¨è¾¹ç•Œçš„å‘½åã€å±€éƒ¨æ‹†åˆ†ã€æµ‹è¯•å¤¹å…·ã€æ—¥å¿—æ ¼å¼ä¸å°å‹é‡æ„ã€‚
+- åœ¨å·²ç¡®è®¤æŠ€æœ¯æ–¹å‘å†…è¡¥å……å¤±è´¥ç”¨ä¾‹ã€ç±»å‹çº¦æŸã€å¯è§‚æµ‹å­—æ®µå’Œæ–‡æ¡£ã€‚
+
+### Level 2ï¼šåªå»ºè®®ï¼Œä¸é™é»˜æ‰§è¡Œ
+
+- æ›´æ¢éå…³é”®åº“ã€è°ƒæ•´åˆ†å—æˆ–æ£€ç´¢å‚æ•°ã€å¢åŠ ç´¢å¼•ã€æ”¹å˜ç¼“å­˜ç­–ç•¥ã€è°ƒæ•´ç•Œé¢ä¿¡æ¯å±‚çº§ã€‚
+- å»ºè®®å¿…é¡»å†™æ˜è¯æ®ã€å½±å“çš„æŒ‡æ ‡æˆ–æ¨¡å—ï¼Œä»¥åŠå½“å‰ä»æŒ‰å“ªä¸ªå†³å®šç»§ç»­ã€‚
+
+### Level 3ï¼šå¿…é¡»å…ˆæ‰¹å‡†
+
+- æ”¹å˜äº§å“èŒƒå›´ã€æ‰§è¡Œæ¨¡å¼ã€æ ¸å¿ƒæŠ€æœ¯æ–¹å‘ã€æ•°æ®åº“ä¸»è·¯å¾„ã€ç§Ÿæˆ·æˆæƒæ¨¡å‹æˆ–åˆ é™¤è¯­ä¹‰ã€‚
+- æ›´æ¢æ­£å¼ AI Providerã€æé«˜ä»˜è´¹é¢åº¦ã€å¼•å…¥çœŸå®ç”¨æˆ·èµ„æ–™ã€ç”Ÿäº§ Migrationã€éƒ¨ç½²åŒºåŸŸã€ä¿ç•™æœŸé™æˆ–åˆè§„è§„åˆ™ã€‚
+- é™ä½å¼•ç”¨ã€æ‹’ç­”ã€æƒé™éš”ç¦»ã€å®‰å…¨æˆ–æµ‹è¯•é—¨ç¦ï¼›ç¦æ­¢ç”¨â€œå…ˆä¸Šçº¿å†è¡¥â€ç»•è¿‡æ‰¹å‡†ã€‚
+
+## 5. å¿…è¦è§’è‰²ä¸é—®é¢˜è´Ÿè´£äºº
+
+- äº§å“èŒƒå›´ä¸ç”¨æˆ·éªŒæ”¶ â†’ äº§å“ä¸äº¤ä»˜è´Ÿè´£äººã€‚
+- APIã€æ•°æ®æ¨¡å‹ã€Migrationã€Workerã€éƒ¨ç½² â†’ åº”ç”¨ä¸æ•°æ®æ¶æ„è´Ÿè´£äººã€‚
+- Parserã€Chunkã€Embeddingã€Retrievalã€Rerankerã€Promptã€Citationã€Evaluation â†’ RAG ä¸è¯„æµ‹è´Ÿè´£äººã€‚
+- Authã€ç§Ÿæˆ·éš”ç¦»ã€Prompt Injectionã€åˆ é™¤éªŒè¯ã€æµ‹è¯•ä¸å‘å¸ƒè¯æ® â†’ å®‰å…¨ä¸è´¨é‡è´Ÿè´£äººã€‚
+- è·¨è¾¹ç•Œé—®é¢˜ç”±å½±å“æœ€å¤§çš„ä¸€æ–¹æ‹…ä»»ä¸»è´Ÿè´£äººï¼›å®¡æŸ¥æ„è§å†™å…¥åŒä¸€é—®é¢˜ï¼Œä¸å¦å»ºç¬¬äºŒå¥—æ–¹æ¡ˆã€‚
+
+## 6. ä¸“é¡¹è¾¹ç•Œè§„åˆ™
+
+### æ•°æ®åº“ä¸ Migration
+
+- æ‰€æœ‰ç§Ÿæˆ·ä¸šåŠ¡è¡¨ã€å‘é‡å’Œç¼“å­˜é”®å¿…é¡»æºå¸¦ organization_idï¼›ä»»ä½•ç¼ºå°‘ç§Ÿæˆ·é”®çš„æ–°è¡¨æˆ–ç´¢å¼•ä¸å¾—åˆå¹¶ã€‚
+- Schema å˜åŒ–å¿…é¡»æä¾›å‘å‰ Migrationã€å›æ»šæˆ–æ¢å¤ç­–ç•¥ã€æµ‹è¯•æ•°æ®å’Œå®é™…æ‰§è¡Œè¯æ®ï¼›ä¸å¾—ç›´æ¥ä¿®æ”¹ç”Ÿäº§æ•°æ®ã€‚
+- SourceDocumentã€DocumentVersionã€Chunkã€Embedding å’Œ Citation çš„è¿½è¸ªå…³ç³»ä¸å¾—è¢«å±€éƒ¨ä¼˜åŒ–ç ´åã€‚
+
+### RAG ä¸ Provider
+
+- æ–‡æ¡£æ–‡æœ¬åªä½œä¸ºä¸å¯ä¿¡è¯æ®ï¼Œä¸å¾—è¿›å…¥ System Promptã€å·¥å…·æƒé™æˆ–å¯æ‰§è¡ŒæŒ‡ä»¤åŒºã€‚
+- å›ç­”å‰å¿…é¡»å®ŒæˆæœåŠ¡ç«¯æƒé™è¿‡æ»¤ï¼›ç¦æ­¢å…ˆè·¨ç§Ÿæˆ·å¬å›å†è¿‡æ»¤ã€‚
+- æ¯ä¸ªäº‹å®æ€§å›ç­”å¿…é¡»å¼•ç”¨å®é™…å‚ä¸æœ¬æ¬¡å›ç­”çš„æ–‡æ¡£ç‰ˆæœ¬ï¼›å¼•ç”¨æ— æ•ˆæˆ–è¯æ®ä½äºé˜ˆå€¼æ—¶å¿…é¡»æ‹’ç­”ã€‚
+- Embeddingã€Reranker å’Œ Chat Model é€šè¿‡é€‚é…å±‚è°ƒç”¨ï¼›Provider å“åº”å¿…é¡»ç»è¿‡ Schema æ ¡éªŒã€è¶…æ—¶ã€é™æµå’Œé”™è¯¯æ˜ å°„ã€‚
+- è°ƒæ•´ Chunkã€æ¨¡å‹ã€Promptã€top-kã€Reranker æˆ–é˜ˆå€¼åï¼Œå¿…é¡»é‡è·‘å›ºå®šè¯„æµ‹å¹¶æ¯”è¾ƒå¼•ç”¨ã€æ‹’ç­”ã€å»¶è¿Ÿå’Œæˆæœ¬ã€‚
+
+### å®‰å…¨ã€éšç§ä¸æˆæœ¬
+
+- å¯†é’¥åªå­˜åœ¨äºæœåŠ¡ç«¯ Secret Storeï¼›æ—¥å¿—ã€å‰ç«¯åŒ…ã€é”™è¯¯å“åº”ã€æµ‹è¯•å¿«ç…§å’Œå¯¼å‡ºç‰©ä¸å¾—åŒ…å«å¯†é’¥æˆ–åŸå§‹æ•æ„Ÿèµ„æ–™ã€‚
+- ä½¿ç”¨çœŸå®èµ„æ–™å‰å¿…é¡»ç¡®è®¤æ•°æ®æˆæƒã€ä¿ç•™æœŸé™ã€åˆ é™¤è·¯å¾„å’Œ Provider æ•°æ®æ”¿ç­–ï¼›æœªç¡®è®¤æ—¶åªå…è®¸è„±æ•å¤¹å…·ã€‚
+- ä»»ä½•ç¼“å­˜éƒ½å¿…é¡»ç»§æ‰¿ç§Ÿæˆ·ã€ç”¨æˆ·æƒé™ã€èµ„æ–™ç‰ˆæœ¬å’Œåˆ é™¤çŠ¶æ€ï¼›æ— æ³•è¯æ˜éš”ç¦»æ—¶ä¸å¯ç”¨ç¼“å­˜ã€‚
+- Provider è¶…æ—¶ã€é™é¢æˆ–é¢„ç®—ä¸è¶³å¿…é¡»æ˜¾ç¤ºå¯æ¢å¤é”™è¯¯ï¼Œä¸å¾—å›é€€åˆ°æ— å¼•ç”¨ç­”æ¡ˆã€‚
+
+## 7. æµ‹è¯•ä¸å®ŒæˆæŠ¥å‘Š
+
+- å•å…ƒæµ‹è¯•è¦†ç›–æˆæƒè¿‡æ»¤ã€ç‰ˆæœ¬è¿½è¸ªã€æ‹’ç­”é˜ˆå€¼ã€å¼•ç”¨æ˜ å°„ã€å¹‚ç­‰ä»»åŠ¡å’Œåˆ é™¤çŠ¶æ€æœºã€‚
+- é›†æˆæµ‹è¯•ä½¿ç”¨ä¸¤ä¸ªç»„ç»‡å’ŒåŒåæ–‡ä»¶éªŒè¯é›¶æ³„éœ²ï¼Œä½¿ç”¨æ¶æ„æ–‡æ¡£éªŒè¯ Prompt Injection éš”ç¦»ï¼Œä½¿ç”¨å¤±è´¥ä»»åŠ¡éªŒè¯é‡è¯•ä¸æ¢å¤ã€‚
+- RAG å˜æ›´å¿…é¡»è¿è¡Œå›ºå®š Benchmarkï¼›åªæŠ¥å‘Šå®é™…æ‰§è¡Œçš„è¯­æ–™ç‰ˆæœ¬ã€å‚æ•°ã€é€šè¿‡é¡¹ã€å¤±è´¥é¡¹ã€å»¶è¿Ÿå’Œæˆæœ¬ã€‚
+- E2E è¦†ç›–ç®¡ç†å‘˜ä¸Šä¼ åˆ°å¯æ£€ç´¢ã€ç”¨æˆ·æé—®åˆ°æ‰“å¼€å¼•ç”¨ã€æ— ä¾æ®æ‹’ç­”ã€è¶Šæƒè®¿é—®å’Œåˆ é™¤åä¸å¯æ£€ç´¢ã€‚
+- å®ŒæˆæŠ¥å‘Šå¿…é¡»åˆ—å‡ºå®é™…å‘½ä»¤ä¸ç»“æœã€æœªè¿è¡Œæ£€æŸ¥ã€å·²çŸ¥é™åˆ¶å’Œå›æ»šæ–¹å¼ï¼›æ²¡æœ‰è¯æ®æ—¶ä¸å¾—å†™â€œå…¨éƒ¨é€šè¿‡â€ã€‚
+
+## 8. é¡¹ç›®ä¸“å±ç¡¬çº¦æŸ
+
+- å¼•ç”¨ã€æƒé™è¿‡æ»¤ã€æ‹’ç­”å’Œåˆ é™¤æ˜¯äº§å“æ ¸å¿ƒèƒ½åŠ›ï¼Œä¸å¾—ä¸ºäº†é€Ÿåº¦æ›¿æ¢ä¸ºé™æ€æ¼”ç¤ºæ•°æ®åå®£ç§°å®Œæˆã€‚
+- å¤–éƒ¨ä»“åº“æ— æ˜ç¡®å…¼å®¹è®¸å¯è¯æ—¶ç¦æ­¢å¤åˆ¶ä»£ç ï¼›å¯å€Ÿé‰´æ€æƒ³ï¼Œä½†å®ç°å¿…é¡»ç‹¬ç«‹å¹¶è®°å½•æ¥æºã€‚
+- å†å²ç­”æ¡ˆå¯ä»¥ä¿ç•™æ¥æºå¿«ç…§ï¼Œä½†å·²åˆ é™¤èµ„æ–™çš„æ­£æ–‡ä¸å¾—ç»§ç»­å±•ç¤ºï¼›å…·ä½“ä¿ç•™æ–¹å¼é¡»ç¬¦åˆå·²æ‰¹å‡†çš„æ•°æ®æ”¿ç­–ã€‚
+- æ­£å¼ç¯å¢ƒä¸å¾—æŠŠæµ‹è¯• Mockã€å…¬å…±æ ·ä¾‹èµ„æ–™æˆ–è°ƒè¯•åé—¨æš´éœ²ç»™æ™®é€šç”¨æˆ·ã€‚
+
+## 9. è§„åˆ™ä¿®æ”¹æ¡ä»¶
+
+- æ–‡å­—æ¾„æ¸…ã€æ‰€æœ‰è€…åç§°å’Œä¸æ”¹å˜æƒé™çš„æµ‹è¯•è¡¥å……å¯å±€éƒ¨ä¿®æ”¹ï¼Œå¹¶è®°å½•å½±å“ç« èŠ‚ã€‚
+- æ”¹å˜æ°¸ä¹…æ ¸å¿ƒè§„åˆ™ã€æˆæƒç­‰çº§ã€ç§Ÿæˆ·éš”ç¦»ã€å¼•ç”¨/æ‹’ç­”é—¨ç¦ã€æ•°æ®ä¿ç•™ã€Provider æˆ–ç”Ÿäº§ Migration è§„åˆ™å¿…é¡»è·å¾—æ˜ç¡®æ‰¹å‡†ã€‚
+- è§„åˆ™ä¿®æ”¹ååªæ›´æ–°å—å½±å“ç« èŠ‚ï¼›è‹¥æ”¹å˜ HOWï¼ŒåŒæ­¥æ›´æ–° PROJECT_PLAN.mdï¼Œè‹¥æ”¹å˜ WHAT æˆ–èŒƒå›´ï¼Œå…ˆæ›´æ–° PROJECT_BRIEF.mdã€‚`,
+`# AI_PROJECT_RULES
+
+Version: 1.0
+Execution Mode: Team
+
+## 1. Execution mode and highest principles
+
+- Confirmed PROJECT_BRIEF.md and PROJECT_PLAN.md are formal truth; generic RAG practice is not a project decision.
+- Every issue has one primary owner; reviewers perform bounded checks and do not create competing architecture or evaluation conclusions.
+- Correct refusal outranks unsupported answers; tenant isolation, traceable citations, and truthful tests outrank demo appearance.
+
+## 2. Permanent non-trimmable core rules
+
+1. Do not reload all three files for every task.
+2. Load only the minimum context required for the current task.
+3. Read PROJECT_BRIEF.md only for WHAT, WHY, or product boundaries.
+4. Read PROJECT_PLAN.md only for HOW, stage, or technical direction.
+5. Do not reopen a passed issue without new evidence.
+6. Never report an unexecuted test as passed.
+7. Never present [Pending] or [Unverified] as [Confirmed].
+8. Record out-of-scope findings, but do not expand the current task while fixing them.
+
+## 3. Scope control and reopening
+
+- Start work by naming the current stage, allowed scope, and acceptance; do not add capabilities absent from the current PLAN stage.
+- Reopen passed retrieval, authorization, or deletion decisions only for a new failing case, dependency change, data evidence, or approved scope change.
+- Record better ideas as proposals and continue the confirmed path when acceptance is not blocked.
+- Obtain explicit approval and update affected formal files before changing a confirmed BRIEF or PLAN decision.
+
+## 4. AI action authorization
+
+### Level 1 â€” autonomous
+
+- Naming, local decomposition, fixtures, logging shape, and small refactors that preserve external behavior, data meaning, contracts, and security boundaries.
+- Add failure cases, types, observability fields, and documentation within the confirmed technical direction.
+
+### Level 2 â€” suggest, never silently execute
+
+- Replace a noncritical library, tune chunking or retrieval, add an index, change cache strategy, or alter UI information hierarchy.
+- State the evidence, affected metric or module, and which confirmed decision remains in force.
+
+### Level 3 â€” approval required
+
+- Change scope, execution mode, core architecture, database path, tenant authorization, or deletion semantics.
+- Change the production AI provider, paid quota, real user data, production migration, region, retention, or compliance rule.
+- Lower citation, refusal, isolation, security, or test gates; â€œship now, fix laterâ€ is not authorization.
+
+## 5. Required roles and issue ownership
+
+- Product scope and user acceptance â†’ Product and delivery owner.
+- APIs, data, migrations, workers, deployment â†’ Application and data architecture owner.
+- Parsing, chunks, embeddings, retrieval, reranking, prompts, citations, evaluation â†’ RAG and evaluation owner.
+- Authentication, tenant isolation, prompt injection, deletion, testing, release evidence â†’ Security and quality owner.
+- Cross-boundary issues have one primary owner; reviews attach to the same issue instead of producing a second plan.
+
+## 6. Specialized boundary rules
+
+### Database and migrations
+
+- Every tenant business table, vector, and cache key includes organization_id; a new table or index without a tenant key cannot merge.
+- Schema changes include forward migration, rollback or recovery, test data, and executed evidence; never patch production data directly.
+- Preserve traceability across SourceDocument, DocumentVersion, Chunk, Embedding, and Citation.
+
+### RAG and providers
+
+- Document text is untrusted evidence and never enters system instructions, tool authority, or executable directives.
+- Server authorization filtering completes before retrieval; cross-tenant recall followed by application filtering is forbidden.
+- Every factual answer cites the exact participating document version; invalid or weak evidence causes refusal.
+- Embedding, reranker, and chat models use adapters with schema validation, timeout, rate limiting, and error mapping.
+- Changing chunks, model, prompt, top-k, reranker, or threshold requires the fixed benchmark and a comparison of citation, refusal, latency, and cost.
+
+### Security, privacy, and cost
+
+- Secrets remain in the server secret store; logs, client bundles, errors, snapshots, and exports contain neither secrets nor raw sensitive material.
+- Before real sources are used, confirm data authority, retention, deletion, and provider policy; otherwise use sanitized fixtures only.
+- Caches inherit tenant, user permission, source version, and deletion state; do not enable a cache without isolation evidence.
+- Provider timeout, quota, or budget failure is an explicit recoverable error and never falls back to an uncited answer.
+
+## 7. Testing and completion reports
+
+- Unit tests cover authorization, version traceability, refusal thresholds, citation mapping, idempotent jobs, and deletion state.
+- Integration tests use two tenants and identically named files for zero leakage, malicious documents for prompt-injection isolation, and failed jobs for recovery.
+- RAG changes run the fixed benchmark and report only executed corpus versions, settings, passes, failures, latency, and cost.
+- E2E covers upload-to-search, question-to-citation, unsupported refusal, unauthorized access, and post-deletion non-retrieval.
+- Completion reports list executed commands and results, skipped checks, known limits, and rollback; no evidence means no â€œall passedâ€ claim.
+
+## 8. Project-specific hard constraints
+
+- Citation, authorization filtering, refusal, and deletion are core product behavior; static demo data cannot be presented as completion.
+- Do not copy code from external repositories without a clear compatible license; ideas may be referenced but implementation remains independent.
+- Historical answers may retain a source snapshot, but deleted source text cannot remain visible; retention follows approved policy.
+- Production never exposes test mocks, public sample sources, or debug bypasses to ordinary users.
+
+## 9. Rule change conditions
+
+- Clarifications, owner names, and tests that do not change authority may be edited locally with the affected section recorded.
+- Changing core rules, authorization levels, tenant isolation, citation/refusal gates, retention, providers, or production migrations requires explicit approval.
+- Update only affected sections; a HOW change updates PROJECT_PLAN.md, while a WHAT or scope change updates PROJECT_BRIEF.md first.`),
+  };
+}
+
+export function demoResearch(locale: Locale): ResearchResult {
+  const inference = {
+    kind: "ai_inference" as const,
+    source: "Comparison against the confirmed RAG knowledge-base brief",
+    summary: zh(locale, "åŸºäºå·²ç¡®è®¤ RAG ç›®æ ‡ã€æƒé™ä¸å¼•ç”¨é—¨ç¦çš„äº§å“é€‚é…æ¨æ–­ã€‚", "Product-fit inference based on the confirmed RAG, authorization, and citation gates."),
+  };
+  const readme = (source: string, chinese: string, english: string) => ({
+    kind: "readme_claim" as const,
+    source: `${source}:README`,
+    summary: zh(locale, chinese, english),
+  });
+  const license = (source: string, spdx: string) => ({
+    kind: "license_evidence" as const,
+    source: `${source}:LICENSE`,
+    summary: zh(locale, `å†…ç½®å¿«ç…§è®°å½•è¯¥ä»“åº“è®¸å¯è¯ä¸º ${spdx}ã€‚`, `The bundled snapshot records the repository license as ${spdx}.`),
+  });
+  const langchain = readme("langchain-ai/langchain", "README å°†å…¶æè¿°ä¸ºæ„å»ºä¸Šä¸‹æ–‡æ„ŸçŸ¥æ¨ç†åº”ç”¨çš„æ¡†æ¶ã€‚", "Its README describes a framework for context-aware reasoning applications.");
+  const llamaIndex = readme("run-llama/llama_index", "README å±•ç¤ºäº†æ–‡æ¡£æ‘„å–ã€ç´¢å¼•ã€æ£€ç´¢å’ŒæŸ¥è¯¢å·¥ä½œæµã€‚", "Its README presents document ingestion, indexing, retrieval, and query workflows.");
+  const pgvector = readme("pgvector/pgvector", "README è®°å½•äº† PostgreSQL ä¸­çš„å‘é‡ç›¸ä¼¼åº¦æœç´¢èƒ½åŠ›ã€‚", "Its README documents vector similarity search for PostgreSQL.");
+  const haystack = readme("deepset-ai/haystack", "README å±•ç¤ºäº†å¯ç»„åˆçš„æ£€ç´¢ã€ç”Ÿæˆå’Œè¯„æµ‹ç®¡çº¿ã€‚", "Its README presents composable retrieval, generation, and evaluation pipelines.");
+
+  return {
+    queries: ["enterprise RAG knowledge base citations", "RAG document ingestion retrieval evaluation", "PostgreSQL vector search tenant filtering"],
+    fetchedAt: new Date().toISOString(),
+    limitations: [zh(locale, "è¿™æ˜¯ä¸ºå®Œæ•´ RAG æ¡ˆä¾‹å›ºå®šçš„è¯æ®å¿«ç…§ï¼Œä¸ä»£è¡¨å½“å‰ GitHub çŠ¶æ€ï¼›å®æ—¶æ¨¡å¼æ‰æ‰§è¡ŒçœŸå®æ£€ç´¢ã€‚", "This is a fixed evidence snapshot for the complete RAG case, not current GitHub state; live mode performs real retrieval.")],
+    repositories: [
+      {
+        fullName: "langchain-ai/langchain",
+        url: "https://github.com/langchain-ai/langchain",
+        relevance: "high",
+        summary: zh(locale, "æä¾›æ¨¡å‹ã€æ£€ç´¢å™¨ã€å·¥å…·å’Œè¿è¡Œæ—¶æŠ½è±¡ï¼Œé€‚åˆå‚è€ƒ Provider ä¸ RAG ç»„ä»¶è¾¹ç•Œã€‚", "Provides model, retriever, tool, and runtime abstractions useful for provider and RAG component boundaries."),
+        confirmedCapabilities: [zh(locale, "README å£°ç§°æ”¯æŒæ£€ç´¢å¢å¼ºä¸å¤šç§æ¨¡å‹é›†æˆã€‚", "The README claims retrieval-augmented and multi-model integrations.")],
+        usefulReferences: [zh(locale, "å‚è€ƒå¯æ›¿æ¢ Provider å’Œæ£€ç´¢ç»„ä»¶æ¥å£ï¼Œä¸ç›´æ¥ç»§æ‰¿å®Œæ•´æ¡†æ¶å¤æ‚åº¦ã€‚", "Reference replaceable provider and retrieval interfaces without inheriting the full framework complexity.")],
+        avoidCopying: [zh(locale, "MVP ä¸å¼•å…¥ Agentã€å·¥å…·å¾ªç¯å’Œä¸éœ€è¦çš„æŠ½è±¡å±‚ã€‚", "Do not introduce agents, tool loops, or unused abstractions into the MVP.")],
+        differences: [zh(locale, "æœ¬é¡¹ç›®ä»¥ä¼ä¸šæƒé™ã€å¼•ç”¨æœ‰æ•ˆæ€§å’Œåˆ é™¤ä¸ºäº§å“é—¨ç¦ã€‚", "This project makes enterprise authorization, citation validity, and deletion product gates.")],
+        license: { spdx: "MIT", status: "detected" },
+        evidence: [langchain, license("langchain-ai/langchain", "MIT"), inference],
+      },
+      {
+        fullName: "run-llama/llama_index",
+        url: "https://github.com/run-llama/llama_index",
+        relevance: "high",
+        summary: zh(locale, "èšç„¦ç§æœ‰æ•°æ®æ‘„å–ã€ç´¢å¼•ä¸æ£€ç´¢ï¼Œå¯å‚è€ƒæ–‡æ¡£èŠ‚ç‚¹å’Œè¯„æµ‹ç»„ç»‡æ–¹å¼ã€‚", "Focuses on private-data ingestion, indexing, and retrieval and is useful for document-node and evaluation organization."),
+        confirmedCapabilities: [zh(locale, "README å±•ç¤ºäº†æ•°æ®è¿æ¥ã€ç´¢å¼•å’ŒæŸ¥è¯¢èƒ½åŠ›ã€‚", "The README presents data connection, indexing, and querying capabilities.")],
+        usefulReferences: [zh(locale, "å‚è€ƒèµ„æ–™ç‰ˆæœ¬åˆ° Chunkã€å¼•ç”¨å’Œè¯„æµ‹æ ·æœ¬çš„è¿½è¸ªå…³ç³»ã€‚", "Reference traceability from source versions to chunks, citations, and evaluation cases.")],
+        avoidCopying: [zh(locale, "ä¸ç›´æ¥é‡‡ç”¨é»˜è®¤åˆ†å—å’Œæ£€ç´¢å‚æ•°ï¼Œå¿…é¡»ç”¨ä¸­æ–‡è¯„æµ‹é›†éªŒè¯ã€‚", "Do not adopt default chunking and retrieval settings without the Chinese benchmark.")],
+        differences: [zh(locale, "æœ¬é¡¹ç›®è¦æ±‚æ‰€æœ‰æ£€ç´¢å…ˆå®Œæˆç§Ÿæˆ·æƒé™è¿‡æ»¤ã€‚", "This project requires tenant authorization filtering before every retrieval.")],
+        license: { spdx: "MIT", status: "detected" },
+        evidence: [llamaIndex, license("run-llama/llama_index", "MIT"), inference],
+      },
+      {
+        fullName: "pgvector/pgvector",
+        url: "https://github.com/pgvector/pgvector",
+        relevance: "high",
+        summary: zh(locale, "åœ¨ PostgreSQL å†…æä¾›å‘é‡ç±»å‹ã€è·ç¦»ä¸ç´¢å¼•ï¼Œé€‚åˆç¬¬ä¸€ç‰ˆä¿æŒæ•°æ®å’Œæƒé™è¿‡æ»¤åœ¨åŒä¸€æ•°æ®åº“ã€‚", "Adds vector types, distance operations, and indexes to PostgreSQL, keeping v1 data and authorization filtering in one database."),
+        confirmedCapabilities: [zh(locale, "README è®°å½•ç²¾ç¡®ä¸è¿‘ä¼¼å‘é‡æ£€ç´¢åŠå¤šç§è·ç¦»å‡½æ•°ã€‚", "The README documents exact and approximate vector search with multiple distance functions.")],
+        usefulReferences: [zh(locale, "å¤ç”¨æ•°æ®åº“çº§ç§Ÿæˆ·è¿‡æ»¤ä¸å‘é‡å¬å›çš„ç»„åˆæ€è·¯ã€‚", "Reuse the design idea of combining database tenant filters with vector recall.")],
+        avoidCopying: [zh(locale, "ä¸èƒ½æŠŠå»ºç´¢å¼•å½“ä½œè´¨é‡å®Œæˆï¼›ä»éœ€è¯„æµ‹å¬å›ã€å¼•ç”¨å’Œåˆ é™¤ã€‚", "An index is not quality completion; recall, citations, and deletion still require evaluation.")],
+        differences: [zh(locale, "æœ¬é¡¹ç›®è¿˜éœ€è¦å¼‚æ­¥æ‘„å–ã€é‡æ’ã€æ‹’ç­”å’Œæ–‡æ¡£ç‰ˆæœ¬ç®¡ç†ã€‚", "The project also requires async ingestion, reranking, refusal, and source versioning.")],
+        license: { spdx: "PostgreSQL", status: "detected" },
+        evidence: [pgvector, license("pgvector/pgvector", "PostgreSQL"), inference],
+      },
+      {
+        fullName: "deepset-ai/haystack",
+        url: "https://github.com/deepset-ai/haystack",
+        relevance: "medium",
+        summary: zh(locale, "æä¾›ç»„ä»¶åŒ– RAG ç®¡çº¿å’Œè¯„æµ‹æ€è·¯ï¼Œå¯å‚è€ƒæ˜¾å¼ç®¡çº¿ä¸å¤±è´¥è¾¹ç•Œã€‚", "Provides componentized RAG pipelines and evaluation patterns useful for explicit pipelines and failure boundaries."),
+        confirmedCapabilities: [zh(locale, "README å±•ç¤ºäº†æ£€ç´¢ä¸ç”Ÿæˆç»„ä»¶ç¼–æ’ã€‚", "The README presents orchestration of retrieval and generation components.")],
+        usefulReferences: [zh(locale, "å‚è€ƒæŠŠæ‘„å–ã€æ£€ç´¢ã€å›ç­”å’Œè¯„æµ‹æ‹†æˆå¯ç‹¬ç«‹æµ‹è¯•çš„ç»„ä»¶ã€‚", "Reference independently testable ingestion, retrieval, answer, and evaluation components.")],
+        avoidCopying: [zh(locale, "ä¸ä¸ºæ¡†æ¶å®Œæ•´æ€§å¢åŠ  MVP ä¸éœ€è¦çš„ç»„ä»¶ã€‚", "Do not add components merely for framework completeness.")],
+        differences: [zh(locale, "æœ¬é¡¹ç›®çš„æ­£å¼éªŒæ”¶åŒæ—¶åŒ…å«æƒé™éš”ç¦»å’Œç«¯åˆ°ç«¯åˆ é™¤ã€‚", "This project's formal acceptance also includes isolation and end-to-end deletion.")],
+        license: { spdx: "Apache-2.0", status: "detected" },
+        evidence: [haystack, license("deepset-ai/haystack", "Apache-2.0"), inference],
+      },
+    ],
+    assessment: {
+      verdict: "continue_with_focus",
+      verdictReason: zh(locale, "é€šç”¨ RAG æ¡†æ¶å·²ç»æˆç†Ÿï¼Œä½†ä¼ä¸šæƒé™ã€è¯æ®å¼•ç”¨ã€æ‹’ç­”ã€ç‰ˆæœ¬å’Œåˆ é™¤ä»éœ€è¦é¡¹ç›®çº§è®¾è®¡ï¼›åº”å…ˆç”¨å›ºå®šè¯„æµ‹è¯æ˜ä¸»é“¾è·¯ã€‚", "Generic RAG frameworks are mature, but enterprise authorization, citations, refusal, versioning, and deletion still need product-specific design; prove the core path with a fixed benchmark first."),
+      advantages: [{ text: zh(locale, "é¡¹ç›®æŠŠå¼•ç”¨ã€æ‹’ç­”ã€æƒé™å’Œåˆ é™¤å®šä¹‰ä¸ºå¯éªŒæ”¶æ ¸å¿ƒèƒ½åŠ›ï¼Œè€Œä¸æ˜¯åªå±•ç¤ºèŠå¤©æ•ˆæœã€‚", "The project treats citations, refusal, authorization, and deletion as testable core behavior rather than chat polish."), evidence: [pgvector, inference] }],
+      weaknesses: [{ text: zh(locale, "æ–‡æ¡£è§£æè´¨é‡å’Œä¸­æ–‡æ£€ç´¢å‚æ•°å°šæœªéªŒè¯ï¼Œè¿‡æ—©å»ºè®¾å®Œæ•´åå°ä¼šæ”¾å¤§è¿”å·¥ã€‚", "Document parsing quality and Chinese retrieval settings are unverified; building the full administration surface too early would amplify rework."), evidence: [llamaIndex, haystack, inference] }],
+      reusableIdeas: [{ text: zh(locale, "å¯å€Ÿé‰´ç»„ä»¶åŒ– Providerã€æ–‡æ¡£èŠ‚ç‚¹è¿½è¸ªå’Œ PostgreSQL å‘é‡è¿‡æ»¤ï¼Œä½†å‚æ•°å¿…é¡»ç”±æœ¬é¡¹ç›®è¯„æµ‹å†³å®šã€‚", "Use componentized providers, document-node traceability, and PostgreSQL vector filtering while selecting settings through this project's benchmark."), evidence: [langchain, llamaIndex, pgvector, inference] }],
+      differentiation: [{ text: zh(locale, "å·®å¼‚åŒ–åº”è½åœ¨å°å›¢é˜Ÿå¯è´Ÿæ‹…çš„ä¼ä¸šçº§å¯ä¿¡é“¾è·¯ï¼šæ¥æºç‰ˆæœ¬ã€é€æ¡å¼•ç”¨ã€æ­£ç¡®æ‹’ç­”ã€æƒé™å’Œå¯æ ¸éªŒåˆ é™¤ã€‚", "Differentiate through an affordable enterprise trust chain for small teams: source versions, citations, correct refusal, authorization, and verifiable deletion."), evidence: [inference] }],
+      recommendedChanges: [
+        { id: "rag-evaluation-gate", target: "PROJECT_PLAN.md", kind: "validation", summary: zh(locale, "æŠŠå›ºå®š RAG è¯„æµ‹è®¾ä¸ºç¬¬ä¸€é˜¶æ®µå’Œåç»­æ¨¡å‹å˜æ›´çš„å¼ºåˆ¶é—¨ç¦ã€‚", "Make the fixed RAG benchmark a mandatory first stage and gate for later model changes."), rationale: zh(locale, "æ²¡æœ‰é€é¢˜å¼•ç”¨ã€æ‹’ç­”ã€å»¶è¿Ÿå’Œæˆæœ¬è¯æ®ï¼Œæ— æ³•åˆ¤æ–­æ£€ç´¢æ”¹åŠ¨æ˜¯å¦çœŸå®å˜å¥½ã€‚", "Without per-case citation, refusal, latency, and cost evidence, retrieval changes cannot be judged as real improvements.") },
+        { id: "rag-injection-boundary", target: "AI_PROJECT_RULES.md", kind: "technical_reference", summary: zh(locale, "æŠŠæ–‡æ¡£å†…å®¹å›ºå®šä¸ºä¸å¯ä¿¡è¯æ®ï¼Œç¦æ­¢è¿›å…¥ç³»ç»ŸæŒ‡ä»¤å’Œå·¥å…·æƒé™ã€‚", "Treat document content as untrusted evidence and forbid it from system instructions or tool authority."), rationale: zh(locale, "çŸ¥è¯†åº“æ–‡ä»¶æœ¬èº«å¯èƒ½åŒ…å«æ¶æ„æˆ–è¯¯å¯¼æŒ‡ä»¤ã€‚", "Knowledge-base files can contain malicious or misleading instructions.") },
+        { id: "rag-delete-trace", target: "PROJECT_PLAN.md", kind: "validation", summary: zh(locale, "ä¸ºèµ„æ–™ç‰ˆæœ¬åˆ°å‘é‡ã€ç¼“å­˜å’Œå¼•ç”¨å»ºç«‹å¯æ ¸éªŒåˆ é™¤é“¾è·¯ã€‚", "Create a verifiable deletion chain from source version through vectors, caches, and citations."), rationale: zh(locale, "åªåˆ é™¤åŸæ–‡ä»¶ä¼šç•™ä¸‹å¯æ£€ç´¢æ–‡æœ¬å’Œå‘é‡ï¼Œé€ æˆéšç§ä¸æ—§çŸ¥è¯†é£é™©ã€‚", "Deleting only the raw file leaves retrievable text and vectors, creating privacy and stale-knowledge risk.") },
+      ],
+    },
+  };
+}
