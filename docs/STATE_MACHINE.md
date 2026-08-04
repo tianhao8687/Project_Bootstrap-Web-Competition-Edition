@@ -28,5 +28,10 @@ Development dependencies: Vite, strict TypeScript, Vitest, Testing Library, Play
 | `recoverable_error` | retry | previous stable state | Retries only the failed stage |
 | `completed` | edit BRIEF | `brief_review` | Research, PLAN, RULES invalidated |
 | `completed` | edit PLAN | `plan_review` | RULES invalidated |
+| `brief_clarification` | back | `idea_input` | Original idea is restored in the input; a new start replaces the old conversation |
+| `brief_review` | back | `brief_clarification` / `idea_input` | Returns to the saved answer when clarification occurred; BRIEF and all downstream data are invalidated |
+| `research_loading` / `research_review` | back | `brief_review` | Pending research is cancelled; BRIEF becomes unconfirmed; research, PLAN, and RULES are invalidated |
+| `plan_review` | back | `research_review` / `brief_review` | Returns to existing research when available; selected changes are restored; PLAN and RULES are invalidated |
+| `rules_generation` / `completed` | back | `plan_review` | PLAN becomes unconfirmed and RULES is invalidated |
 
-The reducer ignores events that violate these transitions; UI labels are not used to infer state.
+The reducer ignores events that violate these transitions, including stale asynchronous responses that arrive after a back action. UI labels are not used to infer state.

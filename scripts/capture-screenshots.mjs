@@ -25,24 +25,29 @@ try {
   await page.goto("http://127.0.0.1:4173/");
   await page.screenshot({ path: resolve(output, "01-start-desktop.png"), fullPage: true });
 
-  await page.getByRole("textbox", { name: "描述你的项目想法", exact: true }).fill("为自由设计师检查客户交付物是否齐全，并在发送前提示遗漏");
-  await page.getByRole("button", { name: "开始梳理项目", exact: true }).click();
+  await page.getByRole("button", { name: "开始完整知识库案例", exact: true }).click();
+  await page.getByRole("heading", { name: "先把想法说清一点", exact: true }).waitFor();
+  await page.screenshot({ path: resolve(output, "02-clarification-desktop.png"), fullPage: true });
+  await page.getByRole("button", { name: /个人先用 以后可能和同事共享/ }).click();
+  await page.getByRole("button", { name: /确认理解并生成 BRIEF/ }).click();
   await page.getByRole("button", { name: "确认 BRIEF，开始开源审查", exact: true }).waitFor();
-  await page.screenshot({ path: resolve(output, "02-brief-desktop.png"), fullPage: true });
+  await page.screenshot({ path: resolve(output, "03-brief-desktop.png"), fullPage: true });
 
   await page.getByRole("button", { name: "确认 BRIEF，开始开源审查", exact: true }).click();
   await page.getByRole("heading", { name: "开源现实检验", exact: true }).waitFor();
-  await page.screenshot({ path: resolve(output, "03-research-desktop.png"), fullPage: true });
+  await page.screenshot({ path: resolve(output, "04-research-desktop.png"), fullPage: true });
   await page.setViewportSize({ width: 375, height: 812 });
-  await page.screenshot({ path: resolve(output, "04-research-mobile.png"), fullPage: true });
+  await page.screenshot({ path: resolve(output, "05-research-mobile.png"), fullPage: true });
 
   await page.setViewportSize({ width: 1440, height: 900 });
-  await page.getByText("把 MVP 收缩到一条可演示主流程。", { exact: true }).click();
+  await page.getByText("把固定 RAG 评测设为第一阶段和后续模型变更的强制门禁。", { exact: true }).click();
   await page.getByRole("button", { name: "应用所选变更并继续", exact: true }).click();
   await page.getByRole("button", { name: "确认 PLAN，生成 RULES", exact: true }).waitFor();
   await page.getByRole("button", { name: "确认 PLAN，生成 RULES", exact: true }).click();
   await page.getByRole("heading", { name: "三个文件已就绪", exact: true }).waitFor();
-  await page.screenshot({ path: resolve(output, "05-result-desktop.png"), fullPage: true });
+  await page.screenshot({ path: resolve(output, "06-result-desktop.png"), fullPage: true });
+  await page.getByText("对比一句话直出方案", { exact: true }).click();
+  await page.screenshot({ path: resolve(output, "07-comparison-desktop.png") });
   await context.close();
 } finally {
   await browser?.close();

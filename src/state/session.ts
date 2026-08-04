@@ -1,4 +1,5 @@
 import { ProjectSessionSchema, type Locale, type ProjectSession } from "../types/domain";
+import { RAG_DEMO_IDEA } from "../lib/demo";
 
 export const SESSION_STORAGE_KEY = "project-bootstrap-web/session/v1";
 
@@ -22,7 +23,12 @@ export function loadSession(): ProjectSession {
   try {
     const stored = localStorage.getItem(SESSION_STORAGE_KEY);
     if (!stored) return createSession();
-    return ProjectSessionSchema.parse(JSON.parse(stored));
+    const session = ProjectSessionSchema.parse(JSON.parse(stored));
+    if (session.mode === "demo" && session.idea && session.idea !== RAG_DEMO_IDEA[session.locale]) {
+      localStorage.removeItem(SESSION_STORAGE_KEY);
+      return createSession(session.locale);
+    }
+    return session;
   } catch {
     localStorage.removeItem(SESSION_STORAGE_KEY);
     return createSession();

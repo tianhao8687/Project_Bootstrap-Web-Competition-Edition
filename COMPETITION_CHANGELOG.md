@@ -17,7 +17,18 @@ This repository does not present that upstream work as competition-period work. 
 - Safe Markdown rendering, copy, individual Markdown downloads, and an exact three-file ZIP.
 - Recoverable error states for timeouts, schema errors, rate limits, missing licenses, and no relevant results.
 - Responsive, keyboard, performance, browser-error, unit, integration, and E2E coverage.
-- Competition README, deployment guide, honest evaluation protocol, and 90-second demo script.
+- Competition README, deployment guide, honest evaluation protocol, and complete enterprise RAG case walkthrough.
+
+## 2026-08-04 complete-case upgrade
+
+- Replaced the abbreviated walkthrough with a full enterprise RAG knowledge-base case.
+- Added complete bilingual BRIEF, PLAN and RULES artifacts that follow the pinned Project Bootstrap Skill boundaries.
+- Added a four-repository RAG evidence snapshot covering orchestration, indexing, vectors and evaluation patterns.
+- Added explicit tenant isolation, citation, refusal, deletion, provider-adapter, benchmark and cost controls.
+- Updated the immersive start page, automated coverage, walkthrough and reviewed competition screenshots.
+- Added a single beginner-language clarification round with explicit safe defaults and a hard no-second-round server gate.
+- Added a final-page comparison against a clearly labeled illustrative one-sentence direct-output baseline.
+- Added stage-aware back navigation that restores prior conversation and selections while invalidating stale downstream artifacts.
 
 ## Not added
 

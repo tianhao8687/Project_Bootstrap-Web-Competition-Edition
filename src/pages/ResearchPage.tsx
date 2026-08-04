@@ -5,14 +5,15 @@ import { getCopy, verdictLabel } from "../app/copy";
 interface ResearchPageProps {
   locale: Locale;
   research: ResearchResult;
+  initialChanges?: ResearchChange[];
   busy: boolean;
   onApply: (changes: ResearchChange[]) => void;
   onSkip: () => void;
 }
 
-export function ResearchPage({ locale, research, busy, onApply, onSkip }: ResearchPageProps) {
+export function ResearchPage({ locale, research, initialChanges = [], busy, onApply, onSkip }: ResearchPageProps) {
   const text = getCopy(locale);
-  const [selectedIds, setSelectedIds] = useState<string[]>([]);
+  const [selectedIds, setSelectedIds] = useState<string[]>(initialChanges.map((change) => change.id));
   const selected = useMemo(() => research.assessment.recommendedChanges.filter((change) => selectedIds.includes(change.id)), [research, selectedIds]);
 
   const toggle = (id: string) => setSelectedIds((current) => current.includes(id) ? current.filter((item) => item !== id) : [...current, id]);

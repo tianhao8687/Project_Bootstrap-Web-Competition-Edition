@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { Artifact, ChatMessage, Locale } from "../types/domain";
+import type { ClarificationOption } from "../lib/demo";
 import { getCopy } from "../app/copy";
 import { ArtifactPreview } from "../components/ArtifactPreview";
 
@@ -52,19 +53,62 @@ export function WorkspacePage({ locale, artifact, messages, kind, busy, onRevise
   );
 }
 
-export function ClarificationPage({ locale, messages, busy, onAnswer }: { locale: Locale; messages: ChatMessage[]; busy: boolean; onAnswer: (text: string) => void }) {
-  const [answer, setAnswer] = useState("");
-  const latest = [...messages].reverse().find((entry) => entry.role === "assistant");
+interface ClarificationPageProps {
+  locale: Locale;
+  messages: ChatMessage[];
+  busy: boolean;
+  quickReplies?: ClarificationOption[];
+  onAnswer: (text: string) => void;
+}
+
+export function ClarificationPage({ locale, messages, busy, quickReplies, onAnswer }: ClarificationPageProps) {
+  const previousAnswer = messages.filter((entry) => entry.role === "user")[1]?.text ?? "";
+  const [answer, setAnswer] = useState(previousAnswer);
+  const latest = messages.find((entry) => entry.role === "assistant");
+  const originalIdea = messages.find((entry) => entry.role === "user");
+  const unsureReply = locale === "zh-CN"
+    ? "我不确定。请按最安全、最小可行且容易修改的方案推荐，并明确标记假设。"
+    : "I am not sure. Recommend the safest, smallest option that is easy to revise, and label every assumption.";
+  const replies = quickReplies ?? [{ label: locale === "zh-CN" ? "我不确定 请帮我推荐" : "I am unsure — recommend safely", value: unsureReply, recommended: true }];
   return (
     <main className="clarification-page">
       <section>
-        <p className="eyebrow">{locale === "zh-CN" ? "仅询问真正阻塞的问题" : "Only questions that block execution"}</p>
-        <h1>{locale === "zh-CN" ? "还需要一个关键事实" : "One key fact is still needed"}</h1>
-        <div className="question-box">{latest?.text.split("\n").map((line) => line && <p key={line}>{line}</p>)}</div>
+        <div className="clarification-heading">
+          <div>
+            <p className="eyebrow">{locale === "zh-CN" ? "只进行这一轮澄清" : "One clarification round only"}</p>
+            <h1>{locale === "zh-CN" ? "先把想法说清一点" : "Clarify the idea a little"}</h1>
+          </div>
+          <span>{locale === "zh-CN" ? "1 轮" : "1 round"}</span>
+        </div>
+        {originalIdea && (
+          <div className="idea-echo">
+            <span>{locale === "zh-CN" ? "你的原始想法" : "Your original idea"}</span>
+            <p>{originalIdea.text}</p>
+          </div>
+        )}
+        <div className="question-box" aria-live="polite">{latest?.text.split("\n").map((line) => line && <p key={line}>{line}</p>)}</div>
         <form onSubmit={(event) => { event.preventDefault(); if (answer.trim()) onAnswer(answer.trim()); }}>
-          <label htmlFor="clarification-answer">{locale === "zh-CN" ? "你的回答" : "Your answer"}</label>
-          <textarea id="clarification-answer" value={answer} onChange={(event) => setAnswer(event.target.value)} />
-          <button className="button button-primary" disabled={!answer.trim() || busy}>{busy ? getCopy(locale).loadingBrief : (locale === "zh-CN" ? "继续生成 BRIEF" : "Continue to BRIEF")}</button>
+          <fieldset className="quick-replies">
+            <legend>{locale === "zh-CN" ? "直接选择最接近的情况" : "Choose the closest answer"}</legend>
+            {replies.map((reply) => (
+              <button
+                className={answer === reply.value ? "is-selected" : ""}
+                type="button"
+                key={reply.label}
+                aria-pressed={answer === reply.value}
+                onClick={() => setAnswer(reply.value)}
+              >
+                <span>{reply.label}</span>
+                {reply.recommended && <small>{locale === "zh-CN" ? "推荐" : "Recommended"}</small>}
+              </button>
+            ))}
+          </fieldset>
+          <div className="custom-answer">
+            <label htmlFor="clarification-answer">{locale === "zh-CN" ? "或者用自己的话补充" : "Or answer in your own words"}</label>
+            <textarea id="clarification-answer" value={answer} onChange={(event) => setAnswer(event.target.value)} placeholder={locale === "zh-CN" ? "不需要懂技术 说清资料和使用方式即可" : "No technical terms needed — describe the material and how you will use it"} />
+          </div>
+          <p className="clarification-safety">{locale === "zh-CN" ? "回答后直接生成 BRIEF 不会继续追问 非关键未知项会标记为待确认" : "The BRIEF is generated after this answer. Non-blocking unknowns are marked pending instead of triggering more questions."}</p>
+          <button className="button button-primary button-large" disabled={!answer.trim() || busy}>{busy ? getCopy(locale).loadingBrief : (locale === "zh-CN" ? "确认理解并生成 BRIEF" : "Confirm understanding and generate BRIEF")}<span aria-hidden="true">→</span></button>
         </form>
       </section>
     </main>

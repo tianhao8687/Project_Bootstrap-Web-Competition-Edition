@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { Artifact, ArtifactName, Locale } from "../types/domain";
 import { getCopy } from "../app/copy";
 import { ArtifactPreview } from "../components/ArtifactPreview";
+import { ResultComparison } from "../components/ResultComparison";
 import { downloadArtifact, downloadArtifactsZip } from "../lib/export";
 
 export function ResultPage({ locale, artifacts, onEdit }: { locale: Locale; artifacts: Artifact[]; onEdit: (name: ArtifactName) => void }) {
@@ -23,6 +24,7 @@ export function ResultPage({ locale, artifacts, onEdit }: { locale: Locale; arti
         <div><p className="eyebrow">Planning complete</p><h1>{text.resultTitle}</h1><p>{text.resultLead}</p></div>
         <button className="button button-primary" onClick={() => void downloadArtifactsZip(artifacts)}>{text.downloadZip}</button>
       </header>
+      <ResultComparison locale={locale} />
       <section className="result-layout">
         <aside className="file-list">
           {artifacts.map((item, index) => (

@@ -6,7 +6,7 @@ export type SessionAction =
   | { type: "SET_MODE"; mode: "demo" | "live" }
   | { type: "START"; idea: string }
   | { type: "NEEDS_CLARIFICATION"; questions: string[]; warning?: string }
-  | { type: "ADD_USER_MESSAGE"; text: string }
+  | { type: "ANSWER_CLARIFICATION"; text: string }
   | { type: "BRIEF_READY"; artifact: Artifact; message?: string; warning?: string }
   | { type: "REVISE_ARTIFACT"; artifact: Artifact }
   | { type: "CONFIRM_BRIEF" }
@@ -19,6 +19,7 @@ export type SessionAction =
   | { type: "EDIT_UPSTREAM"; artifact: ArtifactName }
   | { type: "FAIL"; code: string; message: string }
   | { type: "RETRY" }
+  | { type: "BACK" }
   | { type: "RESET" };
 
 const now = () => new Date().toISOString();
@@ -39,18 +40,30 @@ export function sessionReducer(session: ProjectSession, action: SessionAction): 
         ...session,
         idea: action.idea.trim(),
         stage: "brief_clarification",
-        messages: [...session.messages, message("user", action.idea.trim())],
+        messages: [message("user", action.idea.trim())],
+        brief: undefined,
+        research: undefined,
+        acceptedResearchChanges: [],
+        plan: undefined,
+        rules: undefined,
+        warningShown: false,
       });
     case "NEEDS_CLARIFICATION":
+      if (session.stage !== "brief_clarification") return session;
       return withUpdate({
         ...session,
         stage: "brief_clarification",
         warningShown: session.warningShown || Boolean(action.warning),
         messages: [...session.messages, message("assistant", [...(action.warning ? [action.warning] : []), ...action.questions].join("\n\n"))],
       });
-    case "ADD_USER_MESSAGE":
-      return withUpdate({ ...session, messages: [...session.messages, message("user", action.text)] });
+    case "ANSWER_CLARIFICATION": {
+      if (session.stage !== "brief_clarification") return session;
+      const questionIndex = session.messages.findIndex((entry) => entry.role === "assistant");
+      const context = questionIndex >= 0 ? session.messages.slice(0, questionIndex + 1) : session.messages;
+      return withUpdate({ ...session, messages: [...context, message("user", action.text)] });
+    }
     case "BRIEF_READY":
+      if (session.stage !== "brief_clarification") return session;
       return withUpdate({
         ...session,
         stage: "brief_review",
@@ -125,6 +138,55 @@ export function sessionReducer(session: ProjectSession, action: SessionAction): 
     }
     case "RETRY":
       return withUpdate({ ...session, stage: session.previousStableStage ?? "idea_input", previousStableStage: undefined });
+    case "BACK": {
+      if (session.stage === "brief_clarification") {
+        return withUpdate({ ...session, stage: "idea_input", brief: undefined, research: undefined, acceptedResearchChanges: [], plan: undefined, rules: undefined });
+      }
+      if (session.stage === "brief_review") {
+        const hasClarificationAnswer = session.messages.filter((entry) => entry.role === "user").length > 1;
+        return withUpdate({
+          ...session,
+          stage: hasClarificationAnswer ? "brief_clarification" : "idea_input",
+          brief: undefined,
+          research: undefined,
+          acceptedResearchChanges: [],
+          plan: undefined,
+          rules: undefined,
+        });
+      }
+      if (session.stage === "research_loading" || session.stage === "research_review") {
+        return withUpdate({
+          ...session,
+          stage: "brief_review",
+          brief: session.brief ? { ...session.brief, confirmed: false } : undefined,
+          research: undefined,
+          acceptedResearchChanges: [],
+          plan: undefined,
+          rules: undefined,
+        });
+      }
+      if (session.stage === "plan_review") {
+        if (session.research) {
+          return withUpdate({ ...session, stage: "research_review", plan: undefined, rules: undefined });
+        }
+        return withUpdate({
+          ...session,
+          stage: "brief_review",
+          brief: session.brief ? { ...session.brief, confirmed: false } : undefined,
+          plan: undefined,
+          rules: undefined,
+        });
+      }
+      if (session.stage === "rules_generation" || session.stage === "completed") {
+        return withUpdate({
+          ...session,
+          stage: "plan_review",
+          plan: session.plan ? { ...session.plan, confirmed: false } : undefined,
+          rules: undefined,
+        });
+      }
+      return session;
+    }
     case "RESET":
       return createSession(session.locale);
     default:

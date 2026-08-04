@@ -2,7 +2,7 @@ import { lazy, Suspense, useEffect, useReducer, useRef, useState } from "react";
 import { getCopy } from "./app/copy";
 import { Progress } from "./components/Progress";
 import { ApiError, requestBootstrap, requestResearch } from "./lib/api";
-import { demoBrief, demoPlan, demoResearch, demoRules } from "./lib/demo";
+import { demoBrief, demoClarification, demoPlan, demoResearch, demoRules } from "./lib/demo";
 import { StartPage } from "./pages/StartPage";
 import { ErrorPage, LoadingPage } from "./pages/StatusPages";
 import { sessionReducer, type SessionAction } from "./state/machine";
@@ -61,7 +61,13 @@ export default function App() {
     try {
       if (next.mode === "demo") {
         await delay(450);
-        dispatch({ type: "BRIEF_READY", artifact: demoBrief(next.idea, next.locale), message: text.draftReady });
+        const clarification = demoClarification(next.locale);
+        const userMessageCount = next.messages.filter((entry) => entry.role === "user").length;
+        if (userMessageCount <= 1) {
+          dispatch({ type: "NEEDS_CLARIFICATION", questions: clarification.questions });
+        } else {
+          dispatch({ type: "BRIEF_READY", artifact: demoBrief(next.locale), message: clarification.understood });
+        }
       } else {
         applyBriefResponse(await requestBootstrap({ locale: next.locale, action: "draft_brief", session: payload(next) }));
       }
@@ -76,7 +82,7 @@ export default function App() {
   };
 
   const handleClarification = (answer: string) => {
-    const action: SessionAction = { type: "ADD_USER_MESSAGE", text: answer };
+    const action: SessionAction = { type: "ANSWER_CLARIFICATION", text: answer };
     const next = reduce(action);
     dispatch(action);
     void generateBrief(next);
@@ -118,7 +124,7 @@ export default function App() {
     try {
       if (next.mode === "demo") {
         await delay(450);
-        dispatch({ type: "PLAN_READY", artifact: demoPlan(next.idea, next.locale) });
+        dispatch({ type: "PLAN_READY", artifact: demoPlan(next.locale) });
       } else {
         const response = await requestBootstrap({ locale: next.locale, action: "draft_plan", session: payload(next) });
         if (!response.artifact) throw new ApiError("MODEL_SCHEMA_ERROR", "The model response did not include PROJECT_PLAN.md.", 502);
@@ -208,6 +214,14 @@ export default function App() {
     dispatch({ type: "RESET" });
   };
 
+  const back = () => {
+    const controller = researchAbortRef.current;
+    researchAbortRef.current = null;
+    controller?.abort();
+    setBusy(false);
+    dispatch({ type: "BACK" });
+  };
+
   const artifacts = [session.brief, session.plan, session.rules].filter((item): item is Artifact => Boolean(item));
   return (
     <div className={`app-shell stage-${session.stage}`}>
@@ -222,6 +236,7 @@ export default function App() {
           <span>03 OUTPUTS</span>
         </div>
         <div className="topbar-actions">
+          {session.stage !== "idea_input" && session.stage !== "recoverable_error" && <button className="text-button back-button" onClick={back}>{text.back}</button>}
           <span className={`mode-indicator mode-${session.mode}`}>{session.mode === "demo" ? text.demo : text.live}</span>
           {session.stage !== "idea_input" && <button className="text-button" onClick={reset}>{text.reset}</button>}
         </div>
@@ -230,17 +245,23 @@ export default function App() {
 
       <Suspense fallback={<LoadingPage locale={session.locale} message={session.locale === "zh-CN" ? "正在加载当前阶段…" : "Loading this stage…"} />}>
         {session.stage === "idea_input" && (
-          <StartPage locale={session.locale} mode={session.mode} busy={busy}
+          <StartPage locale={session.locale} mode={session.mode} busy={busy} initialIdea={session.idea}
             onLocaleChange={(locale) => dispatch({ type: "SET_LOCALE", locale })}
             onModeChange={(mode) => dispatch({ type: "SET_MODE", mode })}
             onStart={handleStart} />
         )}
         {session.stage === "brief_clarification" && (busy || !session.messages.some((entry) => entry.role === "assistant")
           ? <LoadingPage locale={session.locale} message={text.loadingBrief} />
-          : <ClarificationPage locale={session.locale} messages={session.messages} busy={busy} onAnswer={handleClarification} />)}
+          : <ClarificationPage
+              locale={session.locale}
+              messages={session.messages}
+              busy={busy}
+              quickReplies={session.mode === "demo" ? demoClarification(session.locale).options : undefined}
+              onAnswer={handleClarification}
+            />)}
         {session.stage === "brief_review" && <WorkspacePage locale={session.locale} artifact={session.brief} messages={session.messages} kind="brief" busy={busy} onRevise={(content) => session.brief && void revise(session.brief, content)} onContinue={confirmBrief} />}
         {session.stage === "research_loading" && <LoadingPage locale={session.locale} message={text.loadingResearch} actionLabel={text.skip} onAction={skipLoadingResearch} />}
-        {session.stage === "research_review" && session.research && <ResearchPage locale={session.locale} research={session.research} busy={busy} onApply={(changes) => continueFromResearch(changes)} onSkip={() => continueFromResearch()} />}
+        {session.stage === "research_review" && session.research && <ResearchPage locale={session.locale} research={session.research} initialChanges={session.acceptedResearchChanges} busy={busy} onApply={(changes) => continueFromResearch(changes)} onSkip={() => continueFromResearch()} />}
         {session.stage === "plan_review" && <WorkspacePage locale={session.locale} artifact={session.plan} messages={session.messages} kind="plan" busy={busy} onRevise={(content) => session.plan && void revise(session.plan, content)} onContinue={confirmPlan} />}
         {session.stage === "rules_generation" && <LoadingPage locale={session.locale} message={text.loadingRules} />}
         {session.stage === "completed" && artifacts.length === 3 && <ResultPage locale={session.locale} artifacts={artifacts} onEdit={(name: ArtifactName) => dispatch({ type: "EDIT_UPSTREAM", artifact: name })} />}
