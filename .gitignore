@@ -1,0 +1,11 @@
+node_modules/
+.pnpm-store/
+dist/
+playwright-report/
+test-results/
+coverage/
+.vercel/
+.env
+.env.local
+.tmp/
+*.tsbuildinfo

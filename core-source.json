@@ -1,0 +1,31 @@
+{
+  "repository": "tianhao8687/project-bootstrap",
+  "commit": "0806a58185b70560d1079bb95ec6fa94aacf4750",
+  "syncedAt": "2026-08-02T13:24:45.413Z",
+  "files": [
+    "SKILL.md",
+    "en/SKILL.md",
+    "en/THREE_MD_PIPELINE_SPEC.md",
+    "en/templates/PROJECT_BRIEF.md",
+    "en/templates/PROJECT_PLAN.md",
+    "en/templates/AI_PROJECT_RULES.md",
+    "zh-CN/SKILL.md",
+    "zh-CN/THREE_MD_PIPELINE_SPEC.md",
+    "zh-CN/templates/PROJECT_BRIEF.md",
+    "zh-CN/templates/PROJECT_PLAN.md",
+    "zh-CN/templates/AI_PROJECT_RULES.md"
+  ],
+  "hashes": {
+    "SKILL.md": "e66fc9c6a020f0cef907e989b6ec7c82d753be435ded3650edb2682ccc238e9e",
+    "en/SKILL.md": "76fc4020ada33a7640c00434fb29d2814b4ea656fce98ac68654f10351e9d355",
+    "en/THREE_MD_PIPELINE_SPEC.md": "77d78b16ecb48d961fd89a394cf3d34ac83c2d8bed3df796011e12573bc74f99",
+    "en/templates/PROJECT_BRIEF.md": "20d9c77b6f1be5e23458af9ecfe65ae43d26274af16f1015a53b8ef98d36afd5",
+    "en/templates/PROJECT_PLAN.md": "766dcb836aeadf7be00ad4388f735f5ee233c728a2a1b6c0db9888eccc8b8cb8",
+    "en/templates/AI_PROJECT_RULES.md": "35640cc809e1f85feccbcb337c7e1085c3cb229c2125f206cb7fd288a4472cab",
+    "zh-CN/SKILL.md": "0f37e163872659353c93f430dc048c229a724890456980ac8a532d7cdc0ef78c",
+    "zh-CN/THREE_MD_PIPELINE_SPEC.md": "1dc3e4a206074c048570749eb24a28eabc1ed50162d82d918499c84562a368e2",
+    "zh-CN/templates/PROJECT_BRIEF.md": "99e17f308e24ba3fcdfc054f05634b3aaf0db57116864182648fd2ae80f0d6bc",
+    "zh-CN/templates/PROJECT_PLAN.md": "fb50c06713f237561e94a7da01f523198a7fcf8b63ca8194f387dc976c0386ab",
+    "zh-CN/templates/AI_PROJECT_RULES.md": "4ae73a348731b21de18b48bf07d44893df43180ce207f496636d533953736861"
+  }
+}
